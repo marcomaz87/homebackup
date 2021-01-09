@@ -1,0 +1,5 @@
+  - platform: smartir
+    name: CONDIZIONATORE
+    device_code: 5180
+    controller_data: cmnd/sonoff/condizionatore/IRSend
+    

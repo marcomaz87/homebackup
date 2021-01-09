@@ -1,0 +1,42 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+api:
+
+#servizi cloud:
+cloud:
+  alexa: !include alexa.yaml
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+#http:
+
+hacs:
+  token: !secret password_hacs 
+  
+shell_command:
+  connetti: ssh pi@192.168.1.254 cat /sys/class/thermal/thermal_zone0/temp' 
+  reboot_pi_cmd: '/usr/bin/sudo /sbin/shutdown -r now'
+  shutdown_pi_cmd: '/usr/bin/sudo /sbin/shutdown'
+# Text to speech
+tts:
+  - platform: google_translate
+smartir:
+climate: !include climate.yaml
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+mqtt: !include mqtt.yaml
+sensor: !include sensor.yaml
+switch: !include switch.yaml
+binary_sensor: !include binary_sensor.yaml
+input_boolean: !include input_boolean.yaml
+media_player: !include media_player.yaml
+light: !include light.yaml
+garbage_collection: !include garbage_collection.yaml
+input_select: !include input_select.yaml
+input_number: !include input_number.yaml
+input_datetime: !include input_datetime.yaml
+
+deebot: !include deebot.yaml
+camera: !include camera.yaml

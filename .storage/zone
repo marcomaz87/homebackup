@@ -1,0 +1,35 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:map-marker",
+                "id": "lavoro_marco",
+                "latitude": 45.40998257488277,
+                "longitude": 11.912022829055788,
+                "name": "Lavoro marco",
+                "passive": false,
+                "radius": 35.18551247795863
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "lavoro_cristina",
+                "latitude": 45.582153,
+                "longitude": 11.706344,
+                "name": "Lavoro Cristina",
+                "passive": false,
+                "radius": 25.67696500864387
+            },
+            {
+                "icon": "mdi:map-marker",
+                "id": "elsa",
+                "latitude": 45.56221608537293,
+                "longitude": 11.827678084373474,
+                "name": "elsa",
+                "passive": false,
+                "radius": 46.81188050769514
+            }
+        ]
+    },
+    "key": "zone",
+    "version": 1
+}

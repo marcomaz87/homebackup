@@ -1,0 +1,9 @@
+  username: !secret deebot_user
+  password: !secret deebot_password
+  country: IT
+  continent: EU
+  deviceid:
+    - E08C12789B09HE6G0282
+  live_map: True
+  livemappath: '/home/homeassistant/.homeassistant/www/'
+  show_color_rooms: True

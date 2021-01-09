@@ -1,0 +1,31 @@
+filter:
+  include_entities:
+    - light.luce_giardino_posteriore    
+    - script.1594933889917
+    - script.1594933936818
+  include_domains:
+    - switch
+    - light
+    - climate
+    - input_boolean
+  exclude_entities:
+    - switch.ventola_pigarden
+    - input_boolean.force_7
+    - input_boolean.force_gocciolante_frontale
+    - input_boolean.force_gocciolante_posteriore
+    - input_boolean.force_irrigazione_muretto
+    - input_boolean.force_irrigazione_passaggio
+    - input_boolean.force_luce_giardino_lampione
+    - input_boolean.force_luce_giardino_posteriore
+    - input_boolean.force_ventola_pigarden
+    - input_boolean.sonic_prog_avviato
+
+entity_config:
+  climate.condizionatore:
+    name: clima
+    description: climatizzatore
+  script.1594933889917:
+    name: deumidificatore
+  script.1594933936818:
+    name: ventilatore
+

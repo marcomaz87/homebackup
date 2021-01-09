@@ -1,0 +1,13 @@
+{
+    "manufacturer": "Hi-Fi Sony",
+    "supportedModels": [
+      "nessuno"
+    ],
+    "supportedController": "Broadlink",
+    "commandsEncoding": "Base64",
+    "commands": {
+        "off": "",
+        "on": ""
+        
+    }
+}

@@ -1,0 +1,122 @@
+'1584976149161':
+  alias: ora spegne
+  sequence:
+  - timeout: '1:00:00'
+    wait_template: ''
+  - data: {}
+    entity_id: automation.climatizzatore_off_telecomando
+    service: automation.trigger
+'1584977737862':
+  alias: ore spegne
+  sequence:
+  - timeout: '2:00:00'
+    wait_template: ''
+  - data: {}
+    entity_id: automation.climatizzatore_off_telecomando
+    service: automation.trigger
+'1584977827538':
+  alias: ore spegne
+  sequence:
+  - timeout: '3:00:00'
+    wait_template: ''
+  - data: {}
+    entity_id: automation.climatizzatore_off_telecomando
+    service: automation.trigger
+'1584977982787':
+  alias: ore spegne
+  sequence:
+  - timeout: '4:00:00'
+    wait_template: ''
+  - data: {}
+    entity_id: automation.climatizzatore_off_telecomando
+    service: automation.trigger
+'1585684603551':
+  alias: loop riavvio
+  sequence:
+  - delay: 00:01:30
+  - condition: state
+    entity_id: binary_sensor.netgear
+    state: 'off'
+  - data: {}
+    entity_id: automation.reboot_netgear
+    service: automation.trigger
+pigarden_close_all:
+  alias: Interrompi l'irrigazione di tutte le zone
+  icon: mdi:stop
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: pigarden/command
+      payload: close_all
+pigarden_close_all_and_disable_scheduling:
+  alias: Interrompi l'irrigazione di tutte le zone e diabilita le schedulazioni
+  icon: mdi:clock-outline
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: pigarden/command
+      payload: close_all disable_scheduling
+pigarden_reboot:
+  alias: Riavvia host piGarden
+  icon: mdi:restart
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: pigarden/command
+      payload: reboot
+pigarden_poweroff:
+  alias: Spegni host piGarden
+  icon: mdi:power
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: pigarden/command
+      payload: poweroff
+reebot_pi:
+  alias: Reboot Raspberry
+  sequence:
+  - service: script.shutdown_pi
+shutdown_pi:
+  alias: Shutdown Raspberry
+  sequence:
+  - service: shell_command.shutdown_pi_cmd
+'1594933889917':
+  alias: deumidificatore
+  sequence:
+  - data: {}
+    entity_id: switch.condizionatore
+    service: switch.turn_on
+  - data:
+      hvac_mode: cool
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+  - data:
+      hvac_mode: dry
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+'1594933936818':
+  alias: ventilatore
+  sequence:
+  - data:
+      hvac_mode: cool
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+  - data:
+      hvac_mode: fan_only
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+prova_scrittura:
+  alias: prova scrittura
+  sequence:
+  - service: shopping_list.add_item
+    data:
+      name: carne
+  mode: single
+'1609192298361':
+  alias: Nuovo script
+  sequence:
+  - type: turn_on
+    device_id: 5749b3ee6e0ba5f9d3a8346fad5e7d85
+    entity_id: switch.echo_cucina_repeat_switch
+    domain: switch
+  mode: single

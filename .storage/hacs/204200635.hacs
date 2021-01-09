@@ -1,0 +1,63 @@
+{
+    "version": "6",
+    "key": "hacs/204200635.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@bruxy70"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": true,
+        "default_branch": "development",
+        "description": "\ud83d\uddd1 Custom Home Assistant sensor for scheduling garbage collection (or other regularly re-occurring events - weekly on given days, semi-weekly or monthly)",
+        "domain": "garbage_collection",
+        "domains": [
+            "garbage_collection",
+            "sensor"
+        ],
+        "downloads": 1390,
+        "file_name": "",
+        "filename": "garbage_collection.zip",
+        "first_install": false,
+        "fork": false,
+        "full_name": "bruxy70/Garbage-Collection",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": "0.110.0",
+        "id": "204200635",
+        "iot_class": "Local Push",
+        "installed": true,
+        "installed_commit": "138f83d",
+        "installed_version": "6.13",
+        "open_issues": 2,
+        "last_commit": "a6e6d4d",
+        "last_version": "3.15",
+        "last_updated": "2021-01-05T15:41:41Z",
+        "manifest_name": "Garbage Collection",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2021-01-05T15:41:41",
+        "releases": true,
+        "render_readme": false,
+        "published_tags": [
+            "3.15",
+            "3.15-beta1",
+            "3.14",
+            "3.12-beta2",
+            "3.12-beta"
+        ],
+        "selected_tag": null,
+        "show_beta": true,
+        "stargazers_count": 120,
+        "topics": [
+            "garbage-collection",
+            "schedule",
+            "waste",
+            "waste-management"
+        ],
+        "zip_release": true
+    }
+}

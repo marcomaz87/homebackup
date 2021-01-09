@@ -1,0 +1,139 @@
+{
+    "version": 1,
+    "key": "core.device_registry",
+    "data": {
+        "devices": [
+            {
+                "config_entries": [
+                    "5ab3647d758c498ea859b49b54b12ba4"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "b98a04b8d818465f"
+                    ]
+                ],
+                "manufacturer": "HUAWEI",
+                "model": "POT-LX1",
+                "name": "Marco",
+                "sw_version": "29",
+                "entry_type": null,
+                "id": "0184373797d94233a4c24194006fc663",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "c76e2d022a344a4b83bee512d5dcef12"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "48937830ab268963"
+                    ]
+                ],
+                "manufacturer": "HUAWEI",
+                "model": "POT-LX1",
+                "name": "Cristina",
+                "sw_version": "29",
+                "entry_type": null,
+                "id": "8796e48dd7004315af1fa99e91c133e7",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "10cbc2b723c64bab9a45cc00f0c7452b"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37"
+                    ]
+                ],
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37"
+                    ]
+                ],
+                "manufacturer": "TP-LINK",
+                "model": "Archer_VR400",
+                "name": "Archer_VR400",
+                "sw_version": null,
+                "entry_type": null,
+                "id": "9802b5a028364f47a4e1f5d0ec8f21bf",
+                "via_device_id": null,
+                "area_id": "bfb618b9baa44b1ea2221ea8bed63a12",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "482d56550d4a49018c16a8c3fecc5775"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "met"
+                    ]
+                ],
+                "manufacturer": "Met.no",
+                "model": "Forecast",
+                "name": "Forecast",
+                "sw_version": null,
+                "entry_type": "service",
+                "id": "a4987766333fb01d3989721181990f65",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "89516806c258a786091b555b0e64bb57"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "broadlink",
+                        "780f7719ecef"
+                    ]
+                ],
+                "manufacturer": "Broadlink",
+                "model": "RM mini 3",
+                "name": "Broadlink",
+                "sw_version": 50,
+                "entry_type": null,
+                "id": "2be49303defd2b31ea10cd3dfe377138",
+                "via_device_id": null,
+                "area_id": "9916136ee976476897daa13cd8e9967f",
+                "name_by_user": null
+            },
+            {
+                "config_entries": [
+                    "69c1389eeb5715ae6098c0d3a6ce2e94"
+                ],
+                "connections": [],
+                "identifiers": [
+                    [
+                        "ipp",
+                        "00000000-0000-1000-8000-0018279238a1"
+                    ]
+                ],
+                "manufacturer": "Canon",
+                "model": "TS3100 series",
+                "name": "Canon TS3100 series",
+                "sw_version": "1.060",
+                "entry_type": null,
+                "id": "d8f348997d6712196ec679495e553d84",
+                "via_device_id": null,
+                "area_id": "c10538d908d81439917535272a7787a7",
+                "name_by_user": null
+            }
+        ],
+        "deleted_devices": []
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "key": "lovelace_resources",
+    "data": {
+        "items": [
+            {
+                "id": "15dbb7e3c1ee4763a389238e4c7929f6",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-card-templater/lovelace-card-templater.js"
+            },
+            {
+                "url": "/hacsfiles/vacuum-card/vacuum-card.js",
+                "type": "module",
+                "id": "a83a861ecf224b20ae25716dc32de39a"
+            }
+        ]
+    }
+}

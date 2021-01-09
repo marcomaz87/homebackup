@@ -1,0 +1,20 @@
+{
+    "data": {
+        "users": [
+            {
+                "password": "JDJiJDEyJFQ4d21ZL09jQk9rRnN0VUZyRUpjWk9VRUdseEhlOWFjZUVZTzFnRU45TUVFdkgvUUljMUtx",
+                "username": "myamazzon"
+            },
+            {
+                "password": "JDJiJDEyJEhwWU43ckY0bk9TNGhXNXZNQmljL2VEd1YudnlLb09YczRVR2lqcXFkbjZXeGU4d1UucGZp",
+                "username": "marco"
+            },
+            {
+                "password": "JDJiJDEyJDBSR1JVaUFhTDFDampKMFlQQkJ3a3V3ODVRQ1lxYXhDTHhNSmd2WXkuYWNHNjBEUXQ2SVRl",
+                "username": "cristina"
+            }
+        ]
+    },
+    "key": "auth_provider.homeassistant",
+    "version": 1
+}

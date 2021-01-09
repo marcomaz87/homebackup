@@ -1,0 +1,93 @@
+  #
+  # binary sensor per switch template pigarden
+  #
+  - platform: mqtt
+    name: pigarden_state_irrigazione_muretto
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['Irrigazione_Muretto']['state'] == 1 or value_json['zones']['Irrigazione_Muretto']['state'] == 2 }}"
+  - platform: mqtt
+    name: pigarden_state_irrigazione_passaggio
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['Irrigazione_Passaggio']['state'] == 1 or value_json['zones']['Irrigazione_Passaggio']['state'] == 2 }}"
+  - platform: mqtt
+    name: pigarden_state_gocciolante_frontale
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['Gocciolante_Frontale']['state'] == 1 or value_json['zones']['Gocciolante_Frontale']['state'] == 2 }}"
+  - platform: mqtt
+    name: pigarden_state_gocciolante_posteriore
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['Gocciolante_Posteriore']['state'] == 1 or value_json['zones']['Gocciolante_Posteriore']['state'] == 2 }}"
+  - platform: mqtt
+    name: ventola_pigarden
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['Ventola_pigarden']['state'] == 1 or value_json['zones']['Ventola_pigarden']['state'] == 2 }}"
+  - platform: mqtt
+    name: luce_giardino_posteriore
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['Luce_Giardino_Posteriore']['state'] == 1 or value_json['zones']['Luce_Giardino_Posteriore']['state'] == 2 }}"
+  - platform: mqtt
+    name: luce_giardino_lampione
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['Luce_Giardino_Lampione']['state'] == 1 or value_json['zones']['Luce_Giardino_Lampione']['state'] == 2 }}"
+  - platform: mqtt
+    name: pigarden_state_7
+    state_topic: "pigarden/result"
+    payload_on: true
+    payload_off: false
+    qos: 0
+    value_template: "{{ value_json['zones']['7']['state'] == 1 or value_json['zones']['7']['state'] == 2 }}"
+#ping TV LG
+  - platform: ping
+    name: TV LG
+    host: 192.168.1.20
+    count: 2
+    scan_interval: 15
+
+#ping WII
+  - platform: ping
+    name: Wii
+    host: 192.168.1.21
+    count: 2
+    scan_interval: 15
+
+#ping NETGEAR
+  - platform: ping
+    name: Netgear
+    host: 192.168.1.3
+    count: 2
+    scan_interval: 30
+
+#ping TP-LINK
+  - platform: ping
+    name: TpLink
+    host: 192.168.1.2
+    count: 2
+    scan_interval: 30
+
+#ping ZTE
+  - platform: ping
+    name: Zte
+    host: 192.168.1.1
+    count: 2
+    scan_interval: 30

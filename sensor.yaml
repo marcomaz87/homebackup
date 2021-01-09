@@ -1,0 +1,121 @@
+ #
+  # Sensore informativo piGarden
+  #
+  - platform: mqtt
+    name: pigarden_info_icon
+    state_topic: "pigarden/result"
+    value_template: >
+      {% if value_json['info'] > "" %}
+        mdi:information 
+      {% elif value_json['success'] > "" %}
+        mdi:message-text
+      {% elif value_json['warning'] > "" %}
+        mdi:message-alert
+      {% else %}
+        {{ states.sensor.pigarden_info_icon.state }}
+      {% endif %}
+
+  - platform: mqtt
+    name: pigarden_info_message
+    state_topic: "pigarden/result"
+    value_template: >
+      {% if value_json['info'] > "" or value_json['success'] > "" or value_json['warning'] > "" %}
+        {% if value_json['info'] > "" %}
+          {{ value_json['info'] }} ({{ value_json['timestamp'] | timestamp_local }})
+        {% endif %}
+        {% if value_json['success'] > "" %}
+          {{ value_json['success'] }} ({{ value_json['timestamp'] | timestamp_local }})
+        {% endif %}
+        {% if value_json['warning'] > "" %}
+          {{ value_json['warning'] }} ({{ value_json['timestamp'] | timestamp_local }})
+        {% endif %}
+      {% else %}
+          {{ states.sensor.pigarden_info_message.state }}
+      {% endif %}
+
+  - platform: mqtt
+    name: pigarden_last_rain_sensor
+    state_topic: "pigarden/result"
+    value_template: >
+      {% if value_json['last_rain_sensor'] > "" %}
+        {{ value_json['last_rain_sensor'] | int | timestamp_local }}
+      {% else %}
+        sconosciuto
+      {% endif %}
+
+  - platform: mqtt
+    name: pigarden_last_rain_online
+    state_topic: "pigarden/result"
+    value_template: >
+      {% if value_json['last_rain_online'] > "" %}
+        {{ value_json['last_rain_online'] | int | timestamp_local }}
+      {% else %}
+        sconosciuto
+      {% endif %}
+
+  - platform: template
+    sensors:
+      pigarden_info:
+        value_template: "{{ states.sensor.pigarden_info_message.state }}"
+        icon_template: "{{ states.sensor.pigarden_info_icon.state }}"
+
+#  - platform: openweathermap
+#    name: openweathermap
+#    api_key: d4d22ea805788420267971135563b4cc
+#    language: it
+#    monitored_conditions:
+#    - weather
+#    - temperature
+#    - wind_speed
+#    - wind_bearing
+#    - humidity
+#    - pressure
+#    - clouds
+#    - rain
+#    - snow
+
+#sonoff dh11
+  - platform: mqtt
+    name: "Temperature"
+    state_topic: "tele/sonoff/bagno/SENSOR"
+    value_template: "{{ value_json['DHT11'].Temperature }}"
+    unit_of_measurement: "°C"
+    availability_topic: "tele/sonoff/bagno/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+  - platform: mqtt
+    name: "Humidity"
+    state_topic: "tele/sonoff/bagno/SENSOR"
+    value_template: "{{ value_json['DHT11'].Humidity }}"
+    unit_of_measurement: "%"
+    availability_topic: "tele/sonoff/bagno/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+
+#temperatura rasp home ass
+  - platform: command_line
+    name: "RaspCPU"
+    command: 'cat /sys/class/thermal/thermal_zone0/temp'
+    unit_of_measurement: '°C'
+    value_template: '{{ value | multiply(0.001) | round(1)}}'
+
+#temperatura rasp pigarden    
+  - platform: mqtt
+    name: pigardenCPU
+    state_topic: "pigarden/result"
+    unit_of_measurement: '°C'
+    value_template: "{{ value_json['temperatura'] | multiply(0.001) | round(1)}}"
+
+#sensori data e tempo
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+ 

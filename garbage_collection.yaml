@@ -1,0 +1,23 @@
+sensors:
+- name: "secco"
+  frequency: "even-weeks"
+  collection_days: "fri"
+- name: "umido"
+  frequency: "weekly"
+  collection_days: 
+  - "wed"
+  - "sun"
+- name: "verde-ramaglie"
+  frequency: "weekly"
+  collection_days: "sun"
+- name: "carta"
+  frequency: "odd-weeks"
+  collection_days: "tue"
+- name: "plastica"
+  frequency: "odd-weeks"
+  collection_days: "wed"
+- name: "vetro"
+  frequency: "every-n-weeks"
+  collection_days: "tue"
+  period: 4
+    

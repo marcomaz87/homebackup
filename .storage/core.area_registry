@@ -1,0 +1,24 @@
+{
+    "version": 1,
+    "key": "core.area_registry",
+    "data": {
+        "areas": [
+            {
+                "name": "Soggiorno",
+                "id": "bfb618b9baa44b1ea2221ea8bed63a12"
+            },
+            {
+                "name": "Cucina",
+                "id": "9916136ee976476897daa13cd8e9967f"
+            },
+            {
+                "name": "Camera da letto",
+                "id": "28a8360421b74779a103e9b27f049b0d"
+            },
+            {
+                "name": "Taverna",
+                "id": "c10538d908d81439917535272a7787a7"
+            }
+        ]
+    }
+}

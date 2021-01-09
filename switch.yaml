@@ -1,0 +1,213 @@
+  #
+  # Switch per gestire le elettrovalvole di piGarden
+  #
+
+  - platform: template
+    switches:
+      pigarden_zone_irrigazione_muretto:
+        value_template: "{{ is_state('binary_sensor.pigarden_state_irrigazione_muretto', 'on') }}"
+        turn_on:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            #payload: "open irrigazione_muretto"
+            payload_template: > 
+              {% if is_state( 'input_boolean.pigarden_force_irrigazione_muretto', 'off' ) %}
+                open Irrigazione_Muretto
+              {% else %}
+                open Irrigazione_Muretto force
+              {% endif %}
+        turn_off:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload: "close Irrigazione_Muretto"
+        entity_picture_template: >
+          {% if not is_state( 'binary_sensor.pigarden_state_irrigazione_muretto', 'on' ) %}
+            /local/icons/sprinkler-pause-3.gif
+          {% else %}
+            /local/icons/sprinkler-play-3.gif
+          {% endif %}
+
+  - platform: template
+    switches:
+      pigarden_zone_irrigazione_passaggio:
+        value_template: "{{ is_state('binary_sensor.pigarden_state_irrigazione_passaggio', 'on') }}"
+        turn_on:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload_template: > 
+              {% if is_state( 'input_boolean.pigarden_force_irrigazione_passaggio', 'off' ) %}
+                open Irrigazione_Passaggio
+              {% else %}
+                open Irrigazione_Passaggio force
+              {% endif %}
+        turn_off:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload: "close Irrigazione_Passaggio"
+        entity_picture_template: >
+          {% if not is_state( 'binary_sensor.pigarden_state_irrigazione_passaggio', 'on' ) %}
+            /local/icons/sprinkler-pause-3.gif
+          {% else %}
+            /local/icons/sprinkler-play-3.gif
+          {% endif %}
+
+  - platform: template
+    switches:
+      pigarden_zone_gocciolante_frontale:
+        value_template: "{{ is_state('binary_sensor.pigarden_state_gocciolante_frontale', 'on') }}"
+        turn_on:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload_template: >
+              {% if is_state( 'input_boolean.pigarden_force_gocciolante_frontale', 'off' ) %}
+                open Gocciolante_Frontale
+              {% else %}
+                open Gocciolante_Frontale force
+              {% endif %}
+        turn_off:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload: "close Gocciolante_Frontale"
+        entity_picture_template: >
+          {% if not is_state( 'binary_sensor.pigarden_state_gocciolante_frontale', 'on' ) %}
+            /local/icons/sprinkler-pause-3.gif
+          {% else %}
+            /local/icons/sprinkler-play-3.gif
+          {% endif %}
+
+  - platform: template
+    switches:
+      pigarden_zone_gocciolante_posteriore:
+        value_template: "{{ is_state('binary_sensor.pigarden_state_gocciolante_posteriore', 'on') }}"
+        turn_on:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            #payload: "open gocciolante_posteriore"
+            payload_template: > 
+              {% if is_state( 'input_boolean.pigarden_force_gocciolante_posteriore', 'off' ) %}
+                open Gocciolante_Posteriore
+              {% else %}
+                open Gocciolante_Posteriore force
+              {% endif %}
+        turn_off:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload: "close Gocciolante_Posteriore"
+        entity_picture_template: >
+          {% if not is_state( 'binary_sensor.pigarden_state_gocciolante_posteriore', 'on' ) %}
+            /local/icons/sprinkler-pause-3.gif
+          {% else %}
+            /local/icons/sprinkler-play-3.gif
+          {% endif %}
+
+  - platform: template
+    switches:
+      ventola_pigarden:
+        value_template: "{{ is_state('binary_sensor.ventola_pigarden', 'on') }}"
+        turn_on:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload_template: > 
+              {% if is_state( 'input_boolean.pigarden_force_ventola_pigarden', 'off' ) %}
+                open Ventola_pigarden
+              {% else %}
+                open Ventola_pigarden force
+              {% endif %}
+        turn_off:
+          service: mqtt.publish
+          data:
+            topic: "pigarden/command"
+            payload: "close Ventola_pigarden"
+        entity_picture_template: >
+
+#broadlink learner
+
+#  - platform: broadlink
+#    mac: '78:0F:77:19:EC:EF'
+#    switches:
+#      learner:
+#        command_on: ''
+#        command_off: '' 
+
+#sonoff
+
+  - platform: mqtt
+    name: "Basculante Garage"
+    state_topic: "stat/sonoff/basculante/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "cmnd/sonoff/basculante/POWER"
+    availability_topic: "tele/sonoff/basculante/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "CONDIZIONATORE"
+    value_template: "{{ value_json.IRSend }}"
+    command_topic: "cmnd/sonoff/condizionatore/Irsend"
+    availability_topic: "tele/sonoff/condizionatore/LWT"
+    icon: mdi:air-conditioner
+    qos: 1
+    payload_on: "0,8454,4200,520,1588,520,516,538,514,540,534,520,1568,540,534,520,532,522,532,520,514,538,534,522,534,518,514,538,516,538,514,538,534,520,514,540,514,540,1586,520,1568,540,514,540,514,540,1568,540,532,520,534,520,1568,540,514,538,1570,538,532,522"
+    payload_off: "0,8454,4178,540,1568,540,514,540,532,522,514,540,1568,540,532,522,532,522,514,540,1586,522,1568,564,508,520,514,540,514,540,532,522,532,522,512,540,512,540,514,540,530,522,532,520,514,540,1568,540,532,522,1588,522,514,546,506,540,514,540,1586,524"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "deumidificatore"
+    value_template: "{{ value_json.IRSend }}"
+    command_topic: "cmnd/sonoff/condizionatore/Irsend"
+    icon: mdi:air-conditioner
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+    
+  - platform: mqtt
+    name: "ventilatore"
+    value_template: "{{ value_json.IRSend }}"
+    command_topic: "cmnd/sonoff/condizionatore/Irsend"
+    icon: mdi:air-conditioner
+    qos: 1
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+      
+  - platform: mqtt
+    name: "SwNetgear"
+    state_topic: "stat/sonoff/swnetgear/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "cmnd/sonoff/swnetgear/POWER"
+    availability_topic: "tele/sonoff/swnetgear/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+    
+  - platform: mqtt
+    name: "Ventola Bagno"
+    state_topic: "stat/sonoff/bagno/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "cmnd/sonoff/bagno/POWER"
+    availability_topic: "tele/sonoff/bagno/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true

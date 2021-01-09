@@ -1,0 +1,31 @@
+  - platform: smartir
+    name: TV LG
+    device_code: 2000
+    controller_data: remote.broadlink_remote
+    power_sensor: binary_sensor.tv_lg
+
+  - platform: smartir
+    name: DVD Samsung
+    device_code: 2100
+    controller_data: remote.broadlink_remote
+
+  - platform: smartir
+    name: Luci mobile
+    device_code: 2200
+    controller_data: remote.broadlink_remote
+
+  - platform: smartir
+    name: Diffusore
+    device_code: 2300
+    controller_data: remote.broadlink_remote
+
+  - platform: smartir
+    name: Hi-Fi Sony
+    device_code: 2400
+    controller_data: remote.broadlink_remote
+
+  - platform: smartir
+    name: Wii
+    device_code: 2600
+    controller_data: remote.broadlink_remote
+    power_sensor: binary_sensor.wii

@@ -1,0 +1,30 @@
+{
+    "data": {
+        "items": [
+            {
+                "device_trackers": [],
+                "id": "myamazzon",
+                "name": "myamazzon",
+                "user_id": "7a03a193e03a4c558bf9cd9da428757e"
+            },
+            {
+                "device_trackers": [
+                    "device_tracker.pot_lx1_2"
+                ],
+                "id": "marco",
+                "name": "Marco",
+                "user_id": "96fb8437f3bb4c68a8eb6b4175a32ffc"
+            },
+            {
+                "device_trackers": [
+                    "device_tracker.pot_lx1_3"
+                ],
+                "id": "cristina",
+                "name": "Cristina",
+                "user_id": "4616cb619119441ba72002b155bd0af0"
+            }
+        ]
+    },
+    "key": "person",
+    "version": 2
+}

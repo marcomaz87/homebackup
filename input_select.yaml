@@ -1,0 +1,16 @@
+#selettore luici aiole
+  timer_luci_aiuole:
+    name: timer aiule
+    options:
+      - Spento
+      - Automatico
+      - Manuale
+    icon: mdi:clock
+#check ventola bagno
+  stato_bagno:
+    name: azionamento bagno
+    options:
+      - Spento
+      - Automatico
+      - Manuale
+    icon: mdi:fan

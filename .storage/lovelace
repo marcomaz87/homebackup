@@ -1,0 +1,1248 @@
+{
+    "version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Casa",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "person.marco"
+                                        },
+                                        {
+                                            "entity": "person.cristina"
+                                        }
+                                    ],
+                                    "type": "glance"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "zone.home"
+                                        },
+                                        {
+                                            "entity": "zone.lavoro_cristina"
+                                        },
+                                        {
+                                            "entity": "zone.lavoro_marco"
+                                        },
+                                        {
+                                            "entity": "person.marco"
+                                        },
+                                        {
+                                            "entity": "person.cristina"
+                                        }
+                                    ],
+                                    "hours_to_show": 0,
+                                    "type": "map"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.zte"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.tplink"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.netgear"
+                                        }
+                                    ],
+                                    "show_icon": true,
+                                    "show_name": true,
+                                    "type": "glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entity": "weather.casa",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "weather.casa"
+                                },
+                                {
+                                    "entity": "sun.sun"
+                                },
+                                {
+                                    "entity": "binary_sensor.zte"
+                                },
+                                {
+                                    "entity": "binary_sensor.tplink"
+                                },
+                                {
+                                    "entity": "binary_sensor.netgear"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "type": "history-graph"
+                        }
+                    ],
+                    "path": "casa",
+                    "title": "casa"
+                },
+                {
+                    "title": "Sonic",
+                    "path": "",
+                    "icon": "mdi:robot-vacuum",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:vacuum-card",
+                                    "entity": "vacuum.sonic",
+                                    "stats": {
+                                        "default": [
+                                            {
+                                                "entity_id": "sensor.sonic_heap",
+                                                "unit": "%",
+                                                "subtitle": "Filtro"
+                                            },
+                                            {
+                                                "entity_id": "sensor.sonic_sidebrush",
+                                                "unit": "%",
+                                                "subtitle": "Spazzole Laterali"
+                                            },
+                                            {
+                                                "entity_id": "sensor.sonic_stats_area",
+                                                "unit": "m2",
+                                                "subtitle": "Area pulita"
+                                            },
+                                            {
+                                                "entity_id": "sensor.sonic_stats_time",
+                                                "unit": "minutes",
+                                                "subtitle": "Tempo pulizia"
+                                            }
+                                        ]
+                                    },
+                                    "cleaning": [
+                                        {
+                                            "entity_id": "sensor.sonic_stats_area",
+                                            "unit": "m2",
+                                            "subtitle": "Area Pulita"
+                                        },
+                                        {
+                                            "entity_id": "sensor.sonic_stats_time",
+                                            "unit": "minutes",
+                                            "subtitle": "Tempo Pulizia"
+                                        }
+                                    ],
+                                    "actions": [
+                                        {
+                                            "name": "Pulizia Cucina",
+                                            "service": "vacuum.send_command",
+                                            "service_data": {
+                                                "entity_id": "vacuum.sonic",
+                                                "command": "spot_area",
+                                                "params": {
+                                                    "rooms": "0",
+                                                    "cleanings": 1
+                                                }
+                                            },
+                                            "icon": "mdi:silverware-fork-knife"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "name": "Cucina",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "0",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:silverware-fork-knife"
+                                                },
+                                                {
+                                                    "type": "button",
+                                                    "name": "Zona Notte",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "3,2,4,5",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:moon-full"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "name": "Bagno",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "4",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:paper-roll-outline"
+                                                },
+                                                {
+                                                    "type": "button",
+                                                    "name": "Corridoio",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "1",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:run"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "name": "Camera matrimoniale",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "5",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:bed-king-outline"
+                                                },
+                                                {
+                                                    "type": "button",
+                                                    "name": "Cameretta",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "2",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:bunk-bed-outline"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "name": "Lavanderia",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "4,6",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:washing-machine"
+                                                },
+                                                {
+                                                    "type": "button",
+                                                    "name": "Taverna",
+                                                    "show_state": true,
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "vacuum.send_command",
+                                                        "service_data": {
+                                                            "entity_id": "vacuum.sonic",
+                                                            "command": "spot_area",
+                                                            "params": {
+                                                                "rooms": "5",
+                                                                "cleanings": 1
+                                                            }
+                                                        }
+                                                    },
+                                                    "entity": "vacuum.sonic",
+                                                    "icon": "mdi:sofa"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "picture-entity",
+                            "entity": "sensor.sonic_last_clean_image",
+                            "camera_image": "camera.ultima_pulizia",
+                            "show_name": false,
+                            "show_state": false
+                        }
+                    ]
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.pigarden_info"
+                                        },
+                                        {
+                                            "entity": "script.pigarden_close_all"
+                                        },
+                                        {
+                                            "entity": "script.pigarden_close_all_and_disable_scheduling"
+                                        },
+                                        {
+                                            "entity": "script.pigarden_reboot"
+                                        },
+                                        {
+                                            "entity": "script.pigarden_poweroff"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Controllo piGarden",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.pigarden_last_rain_sensor",
+                                        "sensor.pigarden_last_rain_online"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Ultima pioggia rilevata",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entity": "weather.openweathermap",
+                                    "name": "Meteo",
+                                    "type": "weather-forecast"
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "vertical-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "glance",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "input_number.tempo_irrigazione_1"
+                                                        },
+                                                        {
+                                                            "entity": "input_number.tempo_irrigazione_2"
+                                                        },
+                                                        {
+                                                            "entity": "input_number.tempo_irrigazione_3"
+                                                        },
+                                                        {
+                                                            "entity": "input_number.tempo_irrigazione_4"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "horizontal-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "button",
+                                                            "tap_action": {
+                                                                "action": "toggle"
+                                                            },
+                                                            "entity": "input_boolean.ciclo_manuale_irrigatori",
+                                                            "show_state": true
+                                                        },
+                                                        {
+                                                            "type": "button",
+                                                            "tap_action": {
+                                                                "action": "toggle"
+                                                            },
+                                                            "entity": "input_boolean.ciclo_manuale_gocciole",
+                                                            "show_state": true
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "horizontal-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "input_number.tempo_irrigazione_1"
+                                                                },
+                                                                {
+                                                                    "entity": "input_number.tempo_irrigazione_2"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "input_number.tempo_irrigazione_3"
+                                                                },
+                                                                {
+                                                                    "entity": "input_number.tempo_irrigazione_4"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.pigarden_zone_irrigazione_muretto"
+                                        },
+                                        {
+                                            "entity": "input_boolean.pigarden_force_irrigazione_muretto"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Irrigazione Muretto",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.pigarden_zone_irrigazione_passaggio"
+                                        },
+                                        {
+                                            "entity": "input_boolean.pigarden_force_irrigazione_passaggio"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Irrigazione Passaggio",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.pigarden_zone_gocciolante_frontale"
+                                        },
+                                        {
+                                            "entity": "input_boolean.pigarden_force_gocciolante_frontale"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Irrigazione gocciolante frontale",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.pigarden_zone_gocciolante_posteriore"
+                                        },
+                                        {
+                                            "entity": "input_boolean.pigarden_force_gocciolante_posteriore"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Irrigazione gocciolante posteriore",
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "light.luce_giardino_anteriore",
+                                                    "icon": "mdi:outdoor-lamp"
+                                                },
+                                                {
+                                                    "entity": "light.luce_giardino_lampione"
+                                                },
+                                                {
+                                                    "entity": "light.luce_giardino_posteriore",
+                                                    "icon": "mdi:outdoor-lamp"
+                                                }
+                                            ],
+                                            "show_header_toggle": false,
+                                            "title": "LUCI GIARDINO",
+                                            "type": "entities"
+                                        }
+                                    ],
+                                    "type": "vertical-stack"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.luce_giardino_anteriore"
+                                        },
+                                        {
+                                            "entity": "light.luce_giardino_lampione"
+                                        },
+                                        {
+                                            "entity": "light.luce_giardino_posteriore"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0,
+                                    "type": "history-graph"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_select.timer_luci_aiuole"
+                                        }
+                                    ],
+                                    "state_color": false,
+                                    "show_header_toggle": false
+                                },
+                                {
+                                    "type": "conditional",
+                                    "conditions": [
+                                        {
+                                            "entity": "input_select.timer_luci_aiuole",
+                                            "state": "Automatico"
+                                        }
+                                    ],
+                                    "card": {
+                                        "type": "markdown",
+                                        "content": "Le luci delle aiole si accenderanno alle: {{ as_timestamp(strptime(state_attr(\"sun.sun\", \"next_dusk\"), \"\")) | timestamp_custom(\"%H:%M:%S\",\"local_tyme=True\") }}\n e spegneranno alle:  {{ as_timestamp(strptime(state_attr(\"sun.sun\", \"next_rising\"), \"\")) | timestamp_custom(\"%H:%M:%S\",\"local_tyme=True\") }}",
+                                        "title": "MODO AUTOMATICO"
+                                    }
+                                },
+                                {
+                                    "type": "conditional",
+                                    "conditions": [
+                                        {
+                                            "entity": "input_select.timer_luci_aiuole",
+                                            "state": "Manuale"
+                                        }
+                                    ],
+                                    "card": {
+                                        "type": "vertical-stack",
+                                        "cards": [
+                                            {
+                                                "type": "entities",
+                                                "entities": [
+                                                    {
+                                                        "entity": "input_datetime.ora_luci_giardino_on"
+                                                    },
+                                                    {
+                                                        "entity": "input_datetime.ora_luci_giardino_off"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "icon": "mdi:fountain",
+                    "path": "pigarden_tab",
+                    "title": "giardino"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "media_player.tv_lg",
+                                            "icon": "mdi:television"
+                                        },
+                                        {
+                                            "entity": "media_player.dvd_samsung",
+                                            "icon": "mdi:disc-player"
+                                        },
+                                        {
+                                            "entity": "media_player.hi_fi_sony",
+                                            "icon": "mdi:radio"
+                                        },
+                                        {
+                                            "entity": "media_player.wii"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "binary_sensor.tv_lg"
+                                        },
+                                        {
+                                            "entity": "media_player.dvd_samsung"
+                                        },
+                                        {
+                                            "entity": "media_player.hi_fi_sony"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.wii"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0,
+                                    "type": "history-graph"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "media_player.diffusore",
+                                            "icon": "mdi:water"
+                                        },
+                                        {
+                                            "entity": "media_player.luci_mobile",
+                                            "icon": "mdi:led-strip-variant"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "media_player.diffusore"
+                                        },
+                                        {
+                                            "entity": "media_player.luci_mobile"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0,
+                                    "type": "history-graph"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:sofa",
+                    "path": "giorno",
+                    "title": "giorno"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "climate.condizionatore",
+                                    "title": "CORRIODOIO",
+                                    "type": "thermostat"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.condizionatore"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "type": "entities"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "script.1584976149161",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "icon": "mdi:numeric-1-box",
+                                            "show_icon": true,
+                                            "show_name": true,
+                                            "state_color": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "type": "button"
+                                        },
+                                        {
+                                            "entity": "script.1584977737862",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "icon": "mdi:numeric-2-box",
+                                            "show_icon": true,
+                                            "show_name": true,
+                                            "state_color": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "type": "button"
+                                        },
+                                        {
+                                            "entity": "script.1584977827538",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "icon": "mdi:numeric-3-box",
+                                            "show_icon": true,
+                                            "show_name": true,
+                                            "state_color": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "type": "button"
+                                        },
+                                        {
+                                            "entity": "script.1584977982787",
+                                            "hold_action": {
+                                                "action": "more-info"
+                                            },
+                                            "icon": "mdi:numeric-4-box",
+                                            "show_icon": true,
+                                            "show_name": true,
+                                            "state_color": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "type": "button"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.condizionatore"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0,
+                                    "type": "history-graph"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [],
+                            "show_header_toggle": false,
+                            "title": "CAMERA MATRIMONIALE",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [],
+                            "show_header_toggle": false,
+                            "title": "CAMERETTA",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:weather-night",
+                    "path": "notte",
+                    "title": "notte"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.swnetgear",
+                                    "icon": "mdi:power"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "light.pigarden_zone_7",
+                                            "icon": "mdi:power-settings"
+                                        },
+                                        {
+                                            "entity": "switch.ventola_pigarden",
+                                            "icon": "mdi:fan"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "TAVERNA",
+                                    "type": "entities"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "sensor.raspcpu",
+                                            "hours_to_show": 4,
+                                            "type": "sensor"
+                                        },
+                                        {
+                                            "detail": 2,
+                                            "entity": "sensor.pigardencpu",
+                                            "hours_to_show": 4,
+                                            "type": "sensor"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "cards": [
+                                                {
+                                                    "entities": [
+                                                        {
+                                                            "entity": "sensor.raspcpu"
+                                                        },
+                                                        {
+                                                            "entity": "sensor.pigardencpu"
+                                                        }
+                                                    ],
+                                                    "hours_to_show": 4,
+                                                    "refresh_interval": 0,
+                                                    "type": "history-graph"
+                                                }
+                                            ],
+                                            "type": "horizontal-stack"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.ventola_pigarden"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0,
+                                    "title": "stato ventola",
+                                    "type": "history-graph"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "input_select.stato_bagno"
+                                        },
+                                        {
+                                            "entity": "switch.ventola_bagno"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Bagno Giu",
+                                    "type": "entities"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "sensor.temperature",
+                                            "hours_to_show": 4,
+                                            "name": "Temperatura bagno",
+                                            "type": "sensor"
+                                        },
+                                        {
+                                            "entity": "sensor.humidity",
+                                            "hours_to_show": 4,
+                                            "name": "Umidit\u00e0 bagno ",
+                                            "type": "sensor"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.ventola_bagno"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0,
+                                    "title": "Stato ventola bagno",
+                                    "type": "history-graph"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.temperature"
+                                                },
+                                                {
+                                                    "entity": "sensor.humidity"
+                                                }
+                                            ],
+                                            "hours_to_show": 4,
+                                            "refresh_interval": 0,
+                                            "type": "history-graph"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                "sensor.canon_ts3100_series_black",
+                                "sensor.canon_ts3100_series_color",
+                                "sensor.canon_ts3100_series"
+                            ],
+                            "title": "STAMPANTE",
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.basculante_garage",
+                                            "icon": "mdi:garage-variant"
+                                        },
+                                        {
+                                            "entity": "light.luce_garage_laterale"
+                                        },
+                                        {
+                                            "entity": "light.luce_garage_neon"
+                                        },
+                                        {
+                                            "entity": "light.luce_garage_stanza"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "GARAGE",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "switch.basculante_garage"
+                                        },
+                                        {
+                                            "entity": "light.luce_garage_laterale"
+                                        },
+                                        {
+                                            "entity": "light.luce_garage_neon"
+                                        },
+                                        {
+                                            "entity": "light.luce_garage_stanza"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0,
+                                    "type": "history-graph"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:garage-variant",
+                    "path": "interrato",
+                    "title": "interrato"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "card": {
+                                                "entity": "sensor.carta",
+                                                "name_template": "fra {{ states.sensor.carta.attributes.days }} giorni",
+                                                "show_name": true,
+                                                "show_state": false,
+                                                "state_image": {
+                                                    "0": "/local/containers/carta_oggi.png",
+                                                    "1": "/local/containers/carta_domani.png",
+                                                    "2": "/local/containers/carta.png"
+                                                },
+                                                "type": "picture-entity"
+                                            },
+                                            "entities": [
+                                                "sensor.carta"
+                                            ],
+                                            "type": "custom:card-templater"
+                                        },
+                                        {
+                                            "card": {
+                                                "entity": "sensor.plastica",
+                                                "name_template": "fra {{ states.sensor.plastica.attributes.days }} giorni",
+                                                "show_name": true,
+                                                "show_state": false,
+                                                "state_image": {
+                                                    "0": "/local/containers/plastica_oggi.png",
+                                                    "1": "/local/containers/plastica_domani.png",
+                                                    "2": "/local/containers/plastica.png"
+                                                },
+                                                "type": "picture-entity"
+                                            },
+                                            "entities": [
+                                                "sensor.plastica"
+                                            ],
+                                            "type": "custom:card-templater"
+                                        },
+                                        {
+                                            "card": {
+                                                "entity": "sensor.umido",
+                                                "name_template": "fra {{ states.sensor.umido.attributes.days }} giorni",
+                                                "show_name": true,
+                                                "show_state": false,
+                                                "state_image": {
+                                                    "0": "/local/containers/umido_oggi.png",
+                                                    "1": "/local/containers/umido_domani.png",
+                                                    "2": "/local/containers/umido.png"
+                                                },
+                                                "type": "picture-entity"
+                                            },
+                                            "entities": [
+                                                "sensor.umido"
+                                            ],
+                                            "type": "custom:card-templater"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "card": {
+                                                "entity": "sensor.vetro",
+                                                "name_template": "fra {{ states.sensor.vetro.attributes.days }} giorni",
+                                                "show_name": true,
+                                                "show_state": false,
+                                                "state_image": {
+                                                    "0": "/local/containers/vetro_oggi.png",
+                                                    "1": "/local/containers/vetro_domani.png",
+                                                    "2": "/local/containers/vetro.png"
+                                                },
+                                                "type": "picture-entity"
+                                            },
+                                            "entities": [
+                                                "sensor.vetro"
+                                            ],
+                                            "type": "custom:card-templater"
+                                        },
+                                        {
+                                            "card": {
+                                                "entity": "sensor.secco",
+                                                "name_template": "fra {{ states.sensor.secco.attributes.days }} giorni",
+                                                "show_name": true,
+                                                "show_state": false,
+                                                "state_image": {
+                                                    "0": "/local/containers/secco_oggi.png",
+                                                    "1": "/local/containers/secco_domani.png",
+                                                    "2": "/local/containers/secco.png"
+                                                },
+                                                "type": "picture-entity"
+                                            },
+                                            "entities": [
+                                                "sensor.secco"
+                                            ],
+                                            "type": "custom:card-templater"
+                                        },
+                                        {
+                                            "card": {
+                                                "entity": "sensor.verde_ramaglie",
+                                                "name_template": "fra {{ states.sensor.verde_ramaglie.attributes.days }} giorni",
+                                                "show_name": true,
+                                                "show_state": false,
+                                                "state_image": {
+                                                    "0": "/local/containers/verde_ramaglie_oggi.png",
+                                                    "1": "/local/containers/verde_ramaglie_domani.png",
+                                                    "2": "/local/containers/verde_ramaglie.png"
+                                                },
+                                                "type": "picture-entity"
+                                            },
+                                            "entities": [
+                                                "sensor.verde_ramaglie"
+                                            ],
+                                            "type": "custom:card-templater"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.pot_lx1_2"
+                                },
+                                {
+                                    "entity": "sensor.pot_lx1_wifi_connection_3"
+                                },
+                                {
+                                    "entity": "sensor.pot_lx1_geocoded_location_3"
+                                },
+                                {
+                                    "entity": "sensor.pot_lx1_battery_level_3"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "person.cristina"
+                                },
+                                {
+                                    "entity": "sensor.pot_lx1_wifi_connection_2"
+                                },
+                                {
+                                    "entity": "sensor.pot_lx1_geocoded_location_2"
+                                },
+                                {
+                                    "entity": "sensor.pot_lx1_battery_level_2"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "varie",
+                    "title": "varie"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "shopping-list",
+                            "title": "Cose da fare"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.sonic_prog_avviato"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_bagno"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_base"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_cameram"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_cameretta"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_corridoio"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_cucina"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_interrompi"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_riprendi"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_lavanderia"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_taverna"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_zn"
+                                },
+                                {
+                                    "entity": "input_boolean.sonic_pulizia_totale"
+                                }
+                            ]
+                        }
+                    ],
+                    "path": "prova",
+                    "title": "prova"
+                }
+            ]
+        }
+    }
+}

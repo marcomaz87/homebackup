@@ -1,0 +1,1958 @@
+{
+    "version": 1,
+    "key": "core.restore_state",
+    "data": [
+        {
+            "state": {
+                "entity_id": "person.myamazzon",
+                "state": "unknown",
+                "attributes": {
+                    "editable": true,
+                    "id": "myamazzon",
+                    "user_id": "7a03a193e03a4c558bf9cd9da428757e",
+                    "friendly_name": "myamazzon"
+                },
+                "last_changed": "2021-01-09T00:14:39.577947+00:00",
+                "last_updated": "2021-01-09T00:14:57.047932+00:00",
+                "context": {
+                    "id": "178243e5ce8f8f78d20dad77a3764339",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "person.marco",
+                "state": "home",
+                "attributes": {
+                    "editable": true,
+                    "id": "marco",
+                    "latitude": 45.5507818,
+                    "longitude": 11.8322174,
+                    "gps_accuracy": 18,
+                    "source": "device_tracker.pot_lx1_2",
+                    "user_id": "96fb8437f3bb4c68a8eb6b4175a32ffc",
+                    "friendly_name": "Marco"
+                },
+                "last_changed": "2021-01-09T00:14:39.578269+00:00",
+                "last_updated": "2021-01-09T00:14:57.048998+00:00",
+                "context": {
+                    "id": "17684bb2c02f969acfff710dfd3688dc",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "person.cristina",
+                "state": "home",
+                "attributes": {
+                    "editable": true,
+                    "id": "cristina",
+                    "latitude": 45.5507667,
+                    "longitude": 11.8322547,
+                    "gps_accuracy": 21,
+                    "source": "device_tracker.pot_lx1_3",
+                    "user_id": "4616cb619119441ba72002b155bd0af0",
+                    "friendly_name": "Cristina"
+                },
+                "last_changed": "2021-01-09T00:14:39.578494+00:00",
+                "last_updated": "2021-01-09T00:20:06.561004+00:00",
+                "context": {
+                    "id": "1c0aee1d8fdb3c8ec5ed28dbe9991218",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_irrigazione_muretto",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.473949+00:00",
+                "last_updated": "2021-01-09T00:14:45.473949+00:00",
+                "context": {
+                    "id": "b81ed052456571dec703372682e28b6f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_irrigazione_passaggio",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.474197+00:00",
+                "last_updated": "2021-01-09T00:14:45.474197+00:00",
+                "context": {
+                    "id": "1ba31f2660177463191c6e3cf62dbe95",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_gocciolante_frontale",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.474358+00:00",
+                "last_updated": "2021-01-09T00:14:45.474358+00:00",
+                "context": {
+                    "id": "00304939387007f34526fbc52ef170f7",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_gocciolante_posteriore",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.474591+00:00",
+                "last_updated": "2021-01-09T00:14:45.474591+00:00",
+                "context": {
+                    "id": "f6461c1b0878d26188af57a217bdc2ad",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_luce_giardino_posteriore",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.474746+00:00",
+                "last_updated": "2021-01-09T00:14:45.474746+00:00",
+                "context": {
+                    "id": "a56aea22612f9463ce19f662e808cd75",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_luce_giardino_lampione",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.474898+00:00",
+                "last_updated": "2021-01-09T00:14:45.474898+00:00",
+                "context": {
+                    "id": "4385f3e0fc752e5f57c9fe8963ffa240",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_7",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.475081+00:00",
+                "last_updated": "2021-01-09T00:14:45.475081+00:00",
+                "context": {
+                    "id": "f95d42ea134ce7e2f65dcc90e0eec582",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.pigarden_force_ventola_pigarden",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "Forza irrigazione in caso di pioggia",
+                    "icon": "mdi:weather-rainy"
+                },
+                "last_changed": "2021-01-09T00:14:45.475240+00:00",
+                "last_updated": "2021-01-09T00:14:45.475240+00:00",
+                "context": {
+                    "id": "7f2407d2aa22dd0eabed17987cdd7464",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.ciclo_manuale_gocciole",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "irrigazione manuale goccie",
+                    "icon": "mdi:watering-can"
+                },
+                "last_changed": "2021-01-09T00:14:45.475392+00:00",
+                "last_updated": "2021-01-09T00:14:45.475392+00:00",
+                "context": {
+                    "id": "fed714cc089789afe57e84232821ebfe",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.ciclo_manuale_irrigatori",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "irrigazione manuale irrigatori",
+                    "icon": "mdi:sprinkler-variant"
+                },
+                "last_changed": "2021-01-09T00:14:45.475538+00:00",
+                "last_updated": "2021-01-09T00:14:45.475538+00:00",
+                "context": {
+                    "id": "f903503a15b0acc988308253a8cafe38",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_zn",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic zona notte"
+                },
+                "last_changed": "2021-01-09T00:14:45.475810+00:00",
+                "last_updated": "2021-01-09T00:14:45.475810+00:00",
+                "context": {
+                    "id": "2c62093ba5c43a46c9b4fcfddcf13758",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_cucina",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic cucina"
+                },
+                "last_changed": "2021-01-09T00:14:45.476009+00:00",
+                "last_updated": "2021-01-09T00:14:45.476009+00:00",
+                "context": {
+                    "id": "6cb2b619fea76af3480d4b5c09981883",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_bagno",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic bagno"
+                },
+                "last_changed": "2021-01-09T00:14:45.476207+00:00",
+                "last_updated": "2021-01-09T00:14:45.476207+00:00",
+                "context": {
+                    "id": "b3718cc3b7afe9bdb5069b38915e26ae",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_corridoio",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic corridoio"
+                },
+                "last_changed": "2021-01-09T00:14:45.476397+00:00",
+                "last_updated": "2021-01-09T00:14:45.476397+00:00",
+                "context": {
+                    "id": "dbc56c1e1959c35a0af65ef5f1a1ee1e",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_cameram",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic camera matrimoniale"
+                },
+                "last_changed": "2021-01-09T00:14:45.476595+00:00",
+                "last_updated": "2021-01-09T00:14:45.476595+00:00",
+                "context": {
+                    "id": "8ed74f308a8c13c45332cf0678540a89",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_cameretta",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic cameretta"
+                },
+                "last_changed": "2021-01-09T00:14:45.476787+00:00",
+                "last_updated": "2021-01-09T00:14:45.476787+00:00",
+                "context": {
+                    "id": "fc357c7ce69abc8122c8da3b317b82fb",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_taverna",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic zona taverna"
+                },
+                "last_changed": "2021-01-09T00:14:45.476979+00:00",
+                "last_updated": "2021-01-09T00:14:45.476979+00:00",
+                "context": {
+                    "id": "0363f6fc5a3a56f4b89da712a46aadfc",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_lavanderia",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic lavanderia"
+                },
+                "last_changed": "2021-01-09T00:14:45.477177+00:00",
+                "last_updated": "2021-01-09T00:14:45.477177+00:00",
+                "context": {
+                    "id": "f7696fbe88d39837cc8ba3f3a5d45905",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_interrompi",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic interrompi pulizia"
+                },
+                "last_changed": "2021-01-09T00:14:45.477367+00:00",
+                "last_updated": "2021-01-09T00:14:45.477367+00:00",
+                "context": {
+                    "id": "0e2c994f0eeb832ab3d2b1b8b3e87ad3",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_riprendi",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic riprendi pulizia"
+                },
+                "last_changed": "2021-01-09T00:14:45.477554+00:00",
+                "last_updated": "2021-01-09T00:14:45.477554+00:00",
+                "context": {
+                    "id": "87ee88f29a379b34503ab91c7430e4e9",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_base",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic torna alla base"
+                },
+                "last_changed": "2021-01-09T00:14:45.477739+00:00",
+                "last_updated": "2021-01-09T00:14:45.477739+00:00",
+                "context": {
+                    "id": "29330c52668e25bd33b2eed9a73b27e8",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_prog_avviato",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "controllo per sonic avviato"
+                },
+                "last_changed": "2021-01-09T00:14:45.477925+00:00",
+                "last_updated": "2021-01-09T00:14:45.477925+00:00",
+                "context": {
+                    "id": "e6f54bdfeb4b258bfb873313f37ed2b5",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_pulizia_totale",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic pulizia completa"
+                },
+                "last_changed": "2021-01-09T00:14:45.478189+00:00",
+                "last_updated": "2021-01-09T00:14:45.478189+00:00",
+                "context": {
+                    "id": "43b216c1a3df80fd2af5e029dc3c3919",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_number.tempo_irrigazione_1",
+                "state": "15.0",
+                "attributes": {
+                    "initial": null,
+                    "editable": false,
+                    "min": 0.0,
+                    "max": 60.0,
+                    "step": 1.0,
+                    "mode": "slider",
+                    "friendly_name": "irr muretto",
+                    "icon": "mdi:sprinkler"
+                },
+                "last_changed": "2021-01-09T00:14:45.762548+00:00",
+                "last_updated": "2021-01-09T00:14:45.762548+00:00",
+                "context": {
+                    "id": "e90ffeea33175cb6ccb54cec8cef7b49",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_number.tempo_irrigazione_2",
+                "state": "30.0",
+                "attributes": {
+                    "initial": null,
+                    "editable": false,
+                    "min": 0.0,
+                    "max": 60.0,
+                    "step": 1.0,
+                    "mode": "slider",
+                    "friendly_name": "irr passaggio",
+                    "icon": "mdi:sprinkler"
+                },
+                "last_changed": "2021-01-09T00:14:45.762830+00:00",
+                "last_updated": "2021-01-09T00:14:45.762830+00:00",
+                "context": {
+                    "id": "192febb61244aff9ce0c5f599330dc35",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_number.tempo_irrigazione_3",
+                "state": "15.0",
+                "attributes": {
+                    "initial": null,
+                    "editable": false,
+                    "min": 0.0,
+                    "max": 60.0,
+                    "step": 1.0,
+                    "mode": "slider",
+                    "friendly_name": "gocciole frontali",
+                    "icon": "mdi:water-plus"
+                },
+                "last_changed": "2021-01-09T00:14:45.763130+00:00",
+                "last_updated": "2021-01-09T00:14:45.763130+00:00",
+                "context": {
+                    "id": "7d8ff8288f61bd267d64a5ed14aa7c75",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_number.tempo_irrigazione_4",
+                "state": "15.0",
+                "attributes": {
+                    "initial": null,
+                    "editable": false,
+                    "min": 0.0,
+                    "max": 60.0,
+                    "step": 1.0,
+                    "mode": "slider",
+                    "friendly_name": "gocciole posteriore",
+                    "icon": "mdi:water-plus"
+                },
+                "last_changed": "2021-01-09T00:14:45.763346+00:00",
+                "last_updated": "2021-01-09T00:14:45.763346+00:00",
+                "context": {
+                    "id": "d9ccec84fe0ad04c6227e4e5495f7666",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_datetime.ora_luci_giardino_on",
+                "state": "17:00:00",
+                "attributes": {
+                    "editable": false,
+                    "has_date": false,
+                    "has_time": true,
+                    "hour": 17,
+                    "minute": 0,
+                    "second": 0,
+                    "timestamp": 61200,
+                    "friendly_name": "ora luci giardino ON"
+                },
+                "last_changed": "2021-01-09T00:14:45.848370+00:00",
+                "last_updated": "2021-01-09T00:14:45.848370+00:00",
+                "context": {
+                    "id": "4b511390ea1a7ecf2c30b52a471eae61",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_datetime.ora_luci_giardino_off",
+                "state": "03:00:00",
+                "attributes": {
+                    "editable": false,
+                    "has_date": false,
+                    "has_time": true,
+                    "hour": 3,
+                    "minute": 0,
+                    "second": 0,
+                    "timestamp": 10800,
+                    "friendly_name": "ora luci giardino OFF"
+                },
+                "last_changed": "2021-01-09T00:14:45.848714+00:00",
+                "last_updated": "2021-01-09T00:14:45.848714+00:00",
+                "context": {
+                    "id": "b004c137ff0337f97c385ae9f330446c",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_select.timer_luci_aiuole",
+                "state": "Manuale",
+                "attributes": {
+                    "options": [
+                        "Spento",
+                        "Automatico",
+                        "Manuale"
+                    ],
+                    "editable": false,
+                    "friendly_name": "timer aiule",
+                    "icon": "mdi:clock"
+                },
+                "last_changed": "2021-01-09T00:14:45.849013+00:00",
+                "last_updated": "2021-01-09T00:14:45.849013+00:00",
+                "context": {
+                    "id": "e871345d7be60187c022fa80f611fb94",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_select.stato_bagno",
+                "state": "Spento",
+                "attributes": {
+                    "options": [
+                        "Spento",
+                        "Automatico",
+                        "Manuale"
+                    ],
+                    "editable": false,
+                    "friendly_name": "azionamento bagno",
+                    "icon": "mdi:fan"
+                },
+                "last_changed": "2021-01-09T00:14:45.850332+00:00",
+                "last_updated": "2021-01-09T00:14:45.850332+00:00",
+                "context": {
+                    "id": "dbe7279998a3ff1c25a68ee6c811e2a2",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pigarden_zone_irrigazione_muretto",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "pigarden_zone_irrigazione_muretto",
+                    "entity_picture": "/local/icons/sprinkler-pause-3.gif"
+                },
+                "last_changed": "2021-01-09T00:14:46.533860+00:00",
+                "last_updated": "2021-01-09T00:14:57.071025+00:00",
+                "context": {
+                    "id": "10ae5f5e23716fcb26502f2f99356f7e",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pigarden_zone_irrigazione_passaggio",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "pigarden_zone_irrigazione_passaggio",
+                    "entity_picture": "/local/icons/sprinkler-pause-3.gif"
+                },
+                "last_changed": "2021-01-09T00:14:46.534125+00:00",
+                "last_updated": "2021-01-09T00:14:57.074872+00:00",
+                "context": {
+                    "id": "d2441ec1e53298975c2a20b20cfbcde6",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pigarden_zone_gocciolante_frontale",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "pigarden_zone_gocciolante_frontale",
+                    "entity_picture": "/local/icons/sprinkler-pause-3.gif"
+                },
+                "last_changed": "2021-01-09T00:14:46.534340+00:00",
+                "last_updated": "2021-01-09T00:14:57.075985+00:00",
+                "context": {
+                    "id": "63ccabf4ce755f66b43b506542810da2",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pigarden_zone_gocciolante_posteriore",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "pigarden_zone_gocciolante_posteriore",
+                    "entity_picture": "/local/icons/sprinkler-pause-3.gif"
+                },
+                "last_changed": "2021-01-09T00:14:46.534675+00:00",
+                "last_updated": "2021-01-09T00:14:57.076982+00:00",
+                "context": {
+                    "id": "58f5e02da367cbdc9dac0538a11d8f78",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ventola_pigarden",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "ventola_pigarden",
+                    "entity_picture": ""
+                },
+                "last_changed": "2021-01-09T00:14:46.534899+00:00",
+                "last_updated": "2021-01-09T00:14:57.077750+00:00",
+                "context": {
+                    "id": "57d3a0c9c5bbd9237537b8a6d03da633",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.deumidificatore",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "deumidificatore",
+                    "icon": "mdi:air-conditioner",
+                    "assumed_state": true
+                },
+                "last_changed": "2021-01-09T00:14:46.536065+00:00",
+                "last_updated": "2021-01-09T00:14:46.536065+00:00",
+                "context": {
+                    "id": "6cd57cd44d124c5700609df9bf8d3b6d",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ventilatore",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "ventilatore",
+                    "icon": "mdi:air-conditioner",
+                    "assumed_state": true
+                },
+                "last_changed": "2021-01-09T00:14:46.537016+00:00",
+                "last_updated": "2021-01-09T00:14:46.537016+00:00",
+                "context": {
+                    "id": "213db8c51161d4f282cbcecd148f704c",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.climate_condizionatore_on",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-02T13:46:58.314434+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584963622002",
+                    "friendly_name": "climate.condizionatore on"
+                },
+                "last_changed": "2021-01-09T00:14:47.008477+00:00",
+                "last_updated": "2021-01-09T00:14:47.008477+00:00",
+                "context": {
+                    "id": "c18ec084d132c32cd41972c68e6eed6e",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.climate_condizionatore_off",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-02T13:47:13.854882+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584971864570",
+                    "friendly_name": "climate.condizionatore off"
+                },
+                "last_changed": "2021-01-09T00:14:47.010622+00:00",
+                "last_updated": "2021-01-09T00:14:47.010622+00:00",
+                "context": {
+                    "id": "ce871e0fdac1f5b7edf029e1ac8e669e",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.climatizzatore_on_telecomando",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": null,
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584972207985",
+                    "friendly_name": "climatizzatore on telecomando"
+                },
+                "last_changed": "2021-01-09T00:14:47.011547+00:00",
+                "last_updated": "2021-01-09T00:14:47.011547+00:00",
+                "context": {
+                    "id": "af861303074e19ed5daaaccaa68a2f7a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.climatizzatore_off_telecomando",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-08-07T21:16:54.010441+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584973142092",
+                    "friendly_name": "climatizzatore off telecomando"
+                },
+                "last_changed": "2021-01-09T00:14:47.012192+00:00",
+                "last_updated": "2021-01-09T00:14:47.012192+00:00",
+                "context": {
+                    "id": "1567ff9d3924ff99c119f83a95ce6d6a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.condizionatore_deum",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-07-16T20:51:51.931043+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584973737003",
+                    "friendly_name": "condizionatore deum."
+                },
+                "last_changed": "2021-01-09T00:14:47.012709+00:00",
+                "last_updated": "2021-01-09T00:14:47.012709+00:00",
+                "context": {
+                    "id": "3afafd018e50c000194a07feb3e4b700",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.climatizzatore_ventilatore",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-07-16T20:51:49.203546+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584973915261",
+                    "friendly_name": "climatizzatore ventilatore"
+                },
+                "last_changed": "2021-01-09T00:14:47.013244+00:00",
+                "last_updated": "2021-01-09T00:14:47.013244+00:00",
+                "context": {
+                    "id": "95255a6b7c9db171a9db1a850d11ef86",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.ventola_raspberry_on",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-10-26T17:09:02.423137+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584980859631",
+                    "friendly_name": "Ventola raspberry on"
+                },
+                "last_changed": "2021-01-09T00:14:47.013754+00:00",
+                "last_updated": "2021-01-09T00:14:47.013754+00:00",
+                "context": {
+                    "id": "5a56d3aefb3ba76b684a90038d4880fe",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.ventola_raspberry_off",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-10-26T17:13:01.988787+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1584981512122",
+                    "friendly_name": "ventola raspberry off"
+                },
+                "last_changed": "2021-01-09T00:14:47.014244+00:00",
+                "last_updated": "2021-01-09T00:14:47.014244+00:00",
+                "context": {
+                    "id": "b6b6bd23c446b8d1374fca2d27241cce",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.reboot_netgear",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": null,
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1585680549438",
+                    "friendly_name": "Reboot netgear"
+                },
+                "last_changed": "2021-01-09T00:14:47.014900+00:00",
+                "last_updated": "2021-01-09T00:14:47.014900+00:00",
+                "context": {
+                    "id": "787069bb8a904766907b885627927b0f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.forza_irrigazione_gocciolanti",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-09-20T00:11:34.793493+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1590966699831",
+                    "friendly_name": "Forza irrigazione gocciolanti"
+                },
+                "last_changed": "2021-01-09T00:14:47.015396+00:00",
+                "last_updated": "2021-01-09T00:14:47.015396+00:00",
+                "context": {
+                    "id": "0fb7c6d9abd3ef82bbd008a151cfdc38",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.clima_deumidifica",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-12-27T01:56:59.436984+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1594939069163",
+                    "friendly_name": "clima deumidifica"
+                },
+                "last_changed": "2021-01-09T00:14:47.015975+00:00",
+                "last_updated": "2021-01-09T00:14:47.015975+00:00",
+                "context": {
+                    "id": "c4afb3c9278fb8e1ae55076ed6f6fe06",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.clima_ventola",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-07-16T22:50:40.868616+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1594939645397",
+                    "friendly_name": "clima ventola"
+                },
+                "last_changed": "2021-01-09T00:14:47.016726+00:00",
+                "last_updated": "2021-01-09T00:14:47.016726+00:00",
+                "context": {
+                    "id": "175e749ce089e39556148a874c82280c",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.segni_ventola_bagno",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-08T12:21:03.833959+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1605450396306",
+                    "friendly_name": "Spegni ventola bagno"
+                },
+                "last_changed": "2021-01-09T00:14:47.017506+00:00",
+                "last_updated": "2021-01-09T00:14:47.017506+00:00",
+                "context": {
+                    "id": "1018ecf95143723889213ba173a06ddf",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.attiva_ventola_bagno_se_umido",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-08T11:50:33.593337+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1605450807962",
+                    "friendly_name": "Attiva ventola bagno se umido"
+                },
+                "last_changed": "2021-01-09T00:14:47.018322+00:00",
+                "last_updated": "2021-01-09T00:14:47.018322+00:00",
+                "context": {
+                    "id": "d21c52106d023a37a7f203483241e32a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.nuova_automazione",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-09T00:14:57.977194+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1607709578741",
+                    "friendly_name": "Riabilita stato sonoff"
+                },
+                "last_changed": "2021-01-09T00:14:47.019265+00:00",
+                "last_updated": "2021-01-09T00:14:58.439517+00:00",
+                "context": {
+                    "id": "29fff595b21beda7e62e5d5797b2fe37",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.accendi_luci_aiole_automatico",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-12-15T16:29:29.006239+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1607870751309",
+                    "friendly_name": "Accendi luci aiole automatico"
+                },
+                "last_changed": "2021-01-09T00:14:47.020333+00:00",
+                "last_updated": "2021-01-09T00:14:47.020333+00:00",
+                "context": {
+                    "id": "57c44e027b6b23e21bdf7c2546d4332e",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.spegni_luce_aiuole_automatico",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2020-12-16T04:46:50.007201+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1607880141796",
+                    "friendly_name": "Spegni luce aiuole Automatico"
+                },
+                "last_changed": "2021-01-09T00:14:47.021271+00:00",
+                "last_updated": "2021-01-09T00:14:47.021271+00:00",
+                "context": {
+                    "id": "9d7afc4ae417f76e8be73338b2745e26",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.controllo_ventola_bagno_manuale",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-08T13:37:33.751255+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1607943848348",
+                    "friendly_name": "Controllo ventola bagno manuale"
+                },
+                "last_changed": "2021-01-09T00:14:47.021840+00:00",
+                "last_updated": "2021-01-09T00:14:47.021840+00:00",
+                "context": {
+                    "id": "404aca3668e001e39eb47af7c41cd8af",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.accensione_con_bottone_ventola_bagno",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-08T13:37:33.733415+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1607959549360",
+                    "friendly_name": "Accensione con bottone ventola bagno"
+                },
+                "last_changed": "2021-01-09T00:14:47.022350+00:00",
+                "last_updated": "2021-01-09T00:14:47.022350+00:00",
+                "context": {
+                    "id": "6fb2b18cafde4b5114abb7ab7c76da8d",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.ripristino_ventola_bagno_su_spento",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-08T13:57:33.864540+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1607988714867",
+                    "friendly_name": "Ripristino ventola bagno su spento"
+                },
+                "last_changed": "2021-01-09T00:14:47.022910+00:00",
+                "last_updated": "2021-01-09T00:14:47.022910+00:00",
+                "context": {
+                    "id": "1842697775295c52265d34e0a62e9e5c",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.accendi_luci_aiuole_in_manuale",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-08T16:00:00.745830+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1607990151719",
+                    "friendly_name": "Accendi luci aiuole in manuale"
+                },
+                "last_changed": "2021-01-09T00:14:47.023653+00:00",
+                "last_updated": "2021-01-09T00:14:47.023653+00:00",
+                "context": {
+                    "id": "527b33ff09bcd2b7ec8ea49916830f69",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.spegni_luce_aiuole_manuale",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2021-01-08T02:00:00.720511+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1608135321277",
+                    "friendly_name": "Spegni luce aiuole in Manuale"
+                },
+                "last_changed": "2021-01-09T00:14:47.024377+00:00",
+                "last_updated": "2021-01-09T00:14:47.024377+00:00",
+                "context": {
+                    "id": "4725dd84b35c47affd1bc68086aed99b",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.forza_irrigazione_gettini",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": null,
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1608144644850",
+                    "friendly_name": "Forza irrigazione gettini"
+                },
+                "last_changed": "2021-01-09T00:14:47.024979+00:00",
+                "last_updated": "2021-01-09T00:14:47.024979+00:00",
+                "context": {
+                    "id": "c25950fd6d135e3e758a0957019b9313",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.secco",
+                "state": "2",
+                "attributes": {
+                    "next_date": "2021-01-15T00:00:00+01:00",
+                    "days": 6,
+                    "last_collection": null,
+                    "last_updated": "2021-01-09T01:14:46.927534+01:00",
+                    "holidays": "",
+                    "friendly_name": "secco",
+                    "icon": "mdi:trash-can",
+                    "device_class": "garbage_collection__schedule"
+                },
+                "last_changed": "2021-01-09T00:14:47.168287+00:00",
+                "last_updated": "2021-01-09T00:14:47.168287+00:00",
+                "context": {
+                    "id": "12640a2b37bb27a67fe5a2f15e5dbc09",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.umido",
+                "state": "1",
+                "attributes": {
+                    "next_date": "2021-01-10T00:00:00+01:00",
+                    "days": 1,
+                    "last_collection": null,
+                    "last_updated": "2021-01-09T01:14:46.927707+01:00",
+                    "holidays": "",
+                    "friendly_name": "umido",
+                    "icon": "mdi:delete-circle",
+                    "device_class": "garbage_collection__schedule"
+                },
+                "last_changed": "2021-01-09T00:14:47.168625+00:00",
+                "last_updated": "2021-01-09T00:14:47.168625+00:00",
+                "context": {
+                    "id": "4ac65c056e4f6590951ea55f6fff6219",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.verde_ramaglie",
+                "state": "1",
+                "attributes": {
+                    "next_date": "2021-01-10T00:00:00+01:00",
+                    "days": 1,
+                    "last_collection": null,
+                    "last_updated": "2021-01-09T01:14:46.927835+01:00",
+                    "holidays": "",
+                    "friendly_name": "verde-ramaglie",
+                    "icon": "mdi:delete-circle",
+                    "device_class": "garbage_collection__schedule"
+                },
+                "last_changed": "2021-01-09T00:14:47.168922+00:00",
+                "last_updated": "2021-01-09T00:14:47.168922+00:00",
+                "context": {
+                    "id": "3afc550370ff981e007af06dacac579f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.carta",
+                "state": "2",
+                "attributes": {
+                    "next_date": "2021-01-19T00:00:00+01:00",
+                    "days": 10,
+                    "last_collection": null,
+                    "last_updated": "2021-01-09T01:14:46.927967+01:00",
+                    "holidays": "",
+                    "friendly_name": "carta",
+                    "icon": "mdi:trash-can",
+                    "device_class": "garbage_collection__schedule"
+                },
+                "last_changed": "2021-01-09T00:14:47.169204+00:00",
+                "last_updated": "2021-01-09T00:14:47.169204+00:00",
+                "context": {
+                    "id": "d884e71a6a01eab4b232bda02c91440a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.plastica",
+                "state": "2",
+                "attributes": {
+                    "next_date": "2021-01-20T00:00:00+01:00",
+                    "days": 11,
+                    "last_collection": null,
+                    "last_updated": "2021-01-09T01:14:46.928085+01:00",
+                    "holidays": "",
+                    "friendly_name": "plastica",
+                    "icon": "mdi:trash-can",
+                    "device_class": "garbage_collection__schedule"
+                },
+                "last_changed": "2021-01-09T00:14:47.169484+00:00",
+                "last_updated": "2021-01-09T00:14:47.169484+00:00",
+                "context": {
+                    "id": "6cb4e0b48e634b8599c65ba8d11d34e5",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.vetro",
+                "state": "2",
+                "attributes": {
+                    "next_date": "2021-02-02T00:00:00+01:00",
+                    "days": 24,
+                    "last_collection": null,
+                    "last_updated": "2021-01-09T01:14:46.928218+01:00",
+                    "holidays": "",
+                    "friendly_name": "vetro",
+                    "icon": "mdi:trash-can",
+                    "device_class": "garbage_collection__schedule"
+                },
+                "last_changed": "2021-01-09T00:14:47.169757+00:00",
+                "last_updated": "2021-01-09T00:14:47.169757+00:00",
+                "context": {
+                    "id": "76a9a742bc348d43f5456982fbe12058",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "media_player.tv_lg",
+                "state": "off",
+                "attributes": {
+                    "source_list": [
+                        "Canale 1",
+                        "Canale 2",
+                        "Canale 3",
+                        "Canale 4",
+                        "Canale 5",
+                        "Canale 6",
+                        "Canale 7",
+                        "Canale 8",
+                        "Canale 9",
+                        "Canale 0",
+                        "Canale43",
+                        "Canale44",
+                        "Canale46",
+                        "av1",
+                        "av2",
+                        "av3"
+                    ],
+                    "device_code": 2000,
+                    "manufacturer": "LG",
+                    "supported_models": [
+                        "32LM3400-ZA"
+                    ],
+                    "supported_controller": "Broadlink",
+                    "commands_encoding": "Base64",
+                    "friendly_name": "TV LG",
+                    "supported_features": 3512,
+                    "device_class": "tv"
+                },
+                "last_changed": "2021-01-09T00:14:47.189530+00:00",
+                "last_updated": "2021-01-09T00:14:47.189530+00:00",
+                "context": {
+                    "id": "ee3eca09c64b2cc414fb9c80f1dc58da",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "media_player.dvd_samsung",
+                "state": "off",
+                "attributes": {
+                    "source_list": [
+                        "EJECT",
+                        "PLAY",
+                        "PAUSE",
+                        "STOP",
+                        "AVANTI",
+                        "INDIETRO",
+                        "SALTA AVANTI",
+                        "SALTA INDIETRO",
+                        "MENU DISCO",
+                        "FRECCIA SU",
+                        "FRECCIA GIU",
+                        "FRECCIA SINISTRA",
+                        "FRECCIA DESTRA",
+                        "INVIO"
+                    ],
+                    "device_code": 2100,
+                    "manufacturer": "DVD Samsung",
+                    "supported_models": [
+                        "BD-J4500R"
+                    ],
+                    "supported_controller": "Broadlink",
+                    "commands_encoding": "Base64",
+                    "friendly_name": "DVD Samsung",
+                    "supported_features": 2432,
+                    "device_class": "tv"
+                },
+                "last_changed": "2021-01-09T00:14:47.189823+00:00",
+                "last_updated": "2021-01-09T00:14:47.189823+00:00",
+                "context": {
+                    "id": "f3da8142ff72800d49327c99d98163d1",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "media_player.luci_mobile",
+                "state": "off",
+                "attributes": {
+                    "source_list": [
+                        "BIANCO",
+                        "ROSSO",
+                        "VERDE",
+                        "GIALLO",
+                        "BLU",
+                        "ROSA",
+                        "VIOLA",
+                        "ARANCIO",
+                        "LAMPEGGIO",
+                        "LENTO"
+                    ],
+                    "device_code": 2200,
+                    "manufacturer": "Luci Mobile",
+                    "supported_models": [
+                        "1234"
+                    ],
+                    "supported_controller": "Broadlink",
+                    "commands_encoding": "Base64",
+                    "friendly_name": "Luci mobile",
+                    "supported_features": 2432,
+                    "device_class": "tv"
+                },
+                "last_changed": "2021-01-09T00:14:47.190052+00:00",
+                "last_updated": "2021-01-09T00:14:47.190052+00:00",
+                "context": {
+                    "id": "97f9a8a6897ca69d7d03036417e9c2a2",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "media_player.diffusore",
+                "state": "off",
+                "attributes": {
+                    "source_list": [
+                        "luce",
+                        "luce off",
+                        "tempo",
+                        "intermittente",
+                        "continuo"
+                    ],
+                    "device_code": 2300,
+                    "manufacturer": "Diffusore",
+                    "supported_models": [
+                        "nessuno"
+                    ],
+                    "supported_controller": "Broadlink",
+                    "commands_encoding": "Base64",
+                    "friendly_name": "Diffusore",
+                    "supported_features": 2432,
+                    "device_class": "tv"
+                },
+                "last_changed": "2021-01-09T00:14:47.190276+00:00",
+                "last_updated": "2021-01-09T00:14:47.190276+00:00",
+                "context": {
+                    "id": "bd1e989fca91ff4e029345d4f4c08e70",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "media_player.hi_fi_sony",
+                "state": "off",
+                "attributes": {
+                    "source_list": [
+                        "sorgenti",
+                        "cd/usb",
+                        "play",
+                        "pausa",
+                        "avanti",
+                        "indietro",
+                        "stop",
+                        "brano succ",
+                        "brano prec",
+                        "seek +",
+                        "seek -"
+                    ],
+                    "device_code": 2400,
+                    "manufacturer": "Hi-Fi Sony",
+                    "supported_models": [
+                        "nessuno"
+                    ],
+                    "supported_controller": "Broadlink",
+                    "commands_encoding": "Base64",
+                    "friendly_name": "Hi-Fi Sony",
+                    "supported_features": 3512,
+                    "device_class": "tv"
+                },
+                "last_changed": "2021-01-09T00:14:47.190494+00:00",
+                "last_updated": "2021-01-09T00:14:47.190494+00:00",
+                "context": {
+                    "id": "fe2b288cb1d492f304f392080a282cdb",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "media_player.wii",
+                "state": "on",
+                "attributes": {
+                    "media_content_type": "channel",
+                    "device_code": 2600,
+                    "manufacturer": "Hi-Fi Sony",
+                    "supported_models": [
+                        "nessuno"
+                    ],
+                    "supported_controller": "Broadlink",
+                    "commands_encoding": "Base64",
+                    "friendly_name": "Wii",
+                    "supported_features": 384,
+                    "device_class": "tv"
+                },
+                "last_changed": "2021-01-09T00:14:47.190842+00:00",
+                "last_updated": "2021-01-09T00:14:47.190842+00:00",
+                "context": {
+                    "id": "c441aa24b794f5731ffbe056d9e505e2",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "climate.condizionatore",
+                "state": "off",
+                "attributes": {
+                    "hvac_modes": [
+                        "off",
+                        "cool",
+                        "dry",
+                        "fan_only"
+                    ],
+                    "min_temp": 18.0,
+                    "max_temp": 30.0,
+                    "target_temp_step": 1.0,
+                    "fan_modes": [
+                        "low",
+                        "medium",
+                        "high",
+                        "turbo"
+                    ],
+                    "current_temperature": null,
+                    "temperature": 25,
+                    "fan_mode": "medium",
+                    "last_on_operation": "fan_only",
+                    "device_code": 5180,
+                    "manufacturer": "Carrier",
+                    "supported_models": [
+                        "42HQZ"
+                    ],
+                    "supported_controller": "MQTT",
+                    "commands_encoding": "Raw",
+                    "friendly_name": "CONDIZIONATORE",
+                    "supported_features": 9
+                },
+                "last_changed": "2021-01-09T00:14:47.191334+00:00",
+                "last_updated": "2021-01-09T00:14:47.191334+00:00",
+                "context": {
+                    "id": "f5137ddab3281054b308d59d9afdb8c2",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "light.luce_garage_stanza",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Luce Garage Stanza",
+                    "supported_features": 0
+                },
+                "last_changed": "2021-01-09T00:14:47.498367+00:00",
+                "last_updated": "2021-01-09T00:14:47.498367+00:00",
+                "context": {
+                    "id": "507cb0f08df83c0ff06868191ea25c78",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "light.luce_garage_neon",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Luce Garage Neon",
+                    "supported_features": 0
+                },
+                "last_changed": "2021-01-09T00:14:47.499223+00:00",
+                "last_updated": "2021-01-09T00:14:47.499223+00:00",
+                "context": {
+                    "id": "2793608bd28ced44e2a506b016c03825",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "light.luce_garage_laterale",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Luce Garage Laterale",
+                    "supported_features": 0
+                },
+                "last_changed": "2021-01-09T00:14:47.499422+00:00",
+                "last_updated": "2021-01-09T00:14:47.499422+00:00",
+                "context": {
+                    "id": "7b3bd5ef683d01918e13828ebd9447be",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "light.luce_giardino_anteriore",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "Luce Giardino Anteriore",
+                    "supported_features": 0
+                },
+                "last_changed": "2021-01-09T00:14:58.509140+00:00",
+                "last_updated": "2021-01-09T00:14:58.509140+00:00",
+                "context": {
+                    "id": "dcd37957f0ca7fb1612657a457449be5",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "device_tracker.pot_lx1_2",
+                "state": "home",
+                "attributes": {
+                    "source_type": "gps",
+                    "latitude": 45.5507818,
+                    "longitude": 11.8322174,
+                    "gps_accuracy": 18,
+                    "altitude": 74.0,
+                    "course": 0,
+                    "speed": 0,
+                    "vertical_accuracy": 1,
+                    "friendly_name": "Marco"
+                },
+                "last_changed": "2021-01-09T00:14:47.584763+00:00",
+                "last_updated": "2021-01-09T00:14:47.584763+00:00",
+                "context": {
+                    "id": "113e1c4cd62a23b0721c9ff0bfa869fd",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "device_tracker.pot_lx1_3",
+                "state": "home",
+                "attributes": {
+                    "source_type": "gps",
+                    "latitude": 45.5507667,
+                    "longitude": 11.8322547,
+                    "gps_accuracy": 21,
+                    "altitude": 74.0,
+                    "course": 0,
+                    "speed": 0,
+                    "vertical_accuracy": 1,
+                    "friendly_name": "Cristina"
+                },
+                "last_changed": "2021-01-09T00:20:06.559936+00:00",
+                "last_updated": "2021-01-09T00:20:06.559936+00:00",
+                "context": {
+                    "id": "8e91558bce65c8dea46c8b17380ae87a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.basculante_garage",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Basculante Garage"
+                },
+                "last_changed": "2021-01-09T00:14:47.626961+00:00",
+                "last_updated": "2021-01-09T00:14:47.626961+00:00",
+                "context": {
+                    "id": "7f5161819289edd08f05ffb42db8d0de",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.condizionatore",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "CONDIZIONATORE",
+                    "icon": "mdi:air-conditioner",
+                    "assumed_state": true
+                },
+                "last_changed": "2021-01-09T00:14:47.638057+00:00",
+                "last_updated": "2021-01-09T00:14:47.644884+00:00",
+                "context": {
+                    "id": "0278f4b01b2761ef25d38227ecab48a9",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.swnetgear",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "SwNetgear"
+                },
+                "last_changed": "2021-01-09T00:14:58.497963+00:00",
+                "last_updated": "2021-01-09T00:14:58.497963+00:00",
+                "context": {
+                    "id": "61fa41b1c5b7ef3aee12ba32bf1750c4",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ventola_bagno",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Ventola Bagno"
+                },
+                "last_changed": "2021-01-09T00:14:47.653032+00:00",
+                "last_updated": "2021-01-09T00:14:47.653032+00:00",
+                "context": {
+                    "id": "56d0cb8a38e8715d3d416f1cec66bd29",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "remote.broadlink_remote",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "Broadlink Remote",
+                    "supported_features": 1
+                },
+                "last_changed": "2021-01-09T00:14:51.892192+00:00",
+                "last_updated": "2021-01-09T00:14:51.892192+00:00",
+                "context": {
+                    "id": "e8d5ac0591521ffaf50b29148e273ba5",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-09T00:21:18.417652+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_zs",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic zona sotto"
+                },
+                "last_changed": "2021-01-02T15:56:39.914769+00:00",
+                "last_updated": "2021-01-02T15:56:39.914769+00:00",
+                "context": {
+                    "id": "4203b39e2ee3759c61d9eaab0edcbc1b",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-02T16:03:47.329987+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "input_boolean.sonic_zg",
+                "state": "off",
+                "attributes": {
+                    "editable": false,
+                    "friendly_name": "sonic zona giorno"
+                },
+                "last_changed": "2021-01-02T15:11:02.788829+00:00",
+                "last_updated": "2021-01-02T15:11:02.788829+00:00",
+                "context": {
+                    "id": "0b0ae31842ac58a6f7ee22e9e5014522",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-01-02T15:41:00.040938+00:00"
+        }
+    ]
+}

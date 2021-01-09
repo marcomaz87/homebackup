@@ -1,0 +1,73 @@
+  pigarden_force_irrigazione_muretto:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy
+  pigarden_force_irrigazione_passaggio:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy
+  pigarden_force_gocciolante_frontale:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy
+  pigarden_force_gocciolante_posteriore:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy
+  pigarden_force_luce_giardino_posteriore:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy
+  pigarden_force_luce_giardino_lampione:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy
+  pigarden_force_7:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy
+  pigarden_force_ventola_pigarden:
+    name: Forza irrigazione in caso di pioggia
+    initial: off
+    icon: mdi:weather-rainy    
+  ciclo_manuale_gocciole:
+    name: irrigazione manuale goccie
+    initial: off
+    icon: mdi:watering-can
+  ciclo_manuale_irrigatori:
+    name: irrigazione manuale irrigatori
+    initial: off
+    icon: mdi:sprinkler-variant
+#avvio sonic:
+  sonic_zn:
+    name: sonic zona notte
+  sonic_cucina:
+    name: sonic cucina
+  sonic_bagno:
+    name: sonic bagno
+  sonic_corridoio:
+    name: sonic corridoio
+  sonic_cameram:
+    name: sonic camera matrimoniale
+  sonic_cameretta:
+    name: sonic cameretta
+  sonic_taverna:
+    name: sonic zona taverna
+  sonic_lavanderia:
+    name: sonic lavanderia
+  sonic_interrompi:
+    name: sonic interrompi pulizia
+  sonic_riprendi:
+    name: sonic riprendi pulizia
+  sonic_base:
+    name: sonic torna alla base
+  sonic_prog_avviato:
+    name: controllo per sonic avviato
+  sonic_pulizia_totale:
+    name: sonic pulizia completa
+  
+  
+    
+
+
+    

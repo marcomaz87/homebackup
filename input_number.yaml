@@ -1,0 +1,24 @@
+  tempo_irrigazione_1:
+    name: irr muretto
+    min: 0
+    max: 60
+    step: 1
+    icon: mdi:sprinkler
+  tempo_irrigazione_2:
+    name: irr passaggio
+    min: 0
+    max: 60
+    step: 1
+    icon: mdi:sprinkler
+  tempo_irrigazione_3:
+    name: gocciole frontali
+    min: 0
+    max: 60
+    step: 1
+    icon: mdi:water-plus
+  tempo_irrigazione_4:
+    name: gocciole posteriore
+    min: 0
+    max: 60
+    step: 1
+    icon: mdi:water-plus

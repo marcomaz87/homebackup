@@ -1,0 +1,9 @@
+  ora_luci_giardino_on:
+    name: ora luci giardino ON
+    has_date: false
+    has_time: true
+  ora_luci_giardino_off:
+    name: ora luci giardino OFF
+    has_date: false
+    has_time: true
+

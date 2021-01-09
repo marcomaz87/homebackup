@@ -1,0 +1,461 @@
+- id: '1584963622002'
+  alias: climate.condizionatore on
+  description: ''
+  trigger:
+  - entity_id: switch.condizionatore
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      hvac_mode: cool
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+- id: '1584971864570'
+  alias: climate.condizionatore off
+  description: ''
+  trigger:
+  - entity_id: switch.condizionatore
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      hvac_mode: 'off'
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+- id: '1584972207985'
+  alias: climatizzatore on telecomando
+  description: ''
+  trigger:
+  - payload: '{"IrReceived":{"Protocol":"LG","Bits":28,"Data":"0x8800347","DataLSB":"0x1001C0E2","Repeat":0}}'
+    platform: mqtt
+    topic: tele/sonoff/condizionatore/RESULT
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.condizionatore
+    service: switch.turn_on
+- id: '1584973142092'
+  alias: climatizzatore off telecomando
+  description: ''
+  trigger:
+  - payload: '{"IrReceived":{"Protocol":"LG","Bits":28,"Data":"0x88C0051","DataLSB":"0x1031008A","Repeat":0}}'
+    platform: mqtt
+    topic: tele/sonoff/condizionatore/RESULT
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.condizionatore
+    service: switch.turn_off
+- id: '1584973737003'
+  alias: condizionatore deum.
+  description: ''
+  trigger:
+  - payload: '{"IrReceived":{"Protocol":"LG","Bits":28,"Data":"0x8809801","DataLSB":"0x10011980","Repeat":0}}'
+    platform: mqtt
+    topic: tele/sonoff/condizionatore/RESULT
+  condition: []
+  action:
+  - data:
+      hvac_mode: dry
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+- id: '1584973915261'
+  alias: climatizzatore ventilatore
+  description: ''
+  trigger:
+  - payload: '{"IrReceived":{"Protocol":"LG","Bits":28,"Data":"0x880A802","DataLSB":"0x10011540","Repeat":0}}'
+    platform: mqtt
+    topic: tele/sonoff/condizionatore/RESULT
+  condition: []
+  action:
+  - data:
+      hvac_mode: fan_only
+    entity_id: climate.condizionatore
+    service: climate.set_hvac_mode
+- id: '1584980859631'
+  alias: Ventola raspberry on
+  description: ''
+  trigger:
+  - entity_id: sensor.pigardencpu
+    platform: numeric_state
+    above: '52'
+  condition:
+  - condition: state
+    entity_id: switch.ventola_pigarden
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: switch.ventola_pigarden
+    service: switch.turn_on
+  mode: single
+- id: '1584981512122'
+  alias: ventola raspberry off
+  description: ''
+  trigger:
+  - below: '39'
+    entity_id: sensor.pigardencpu
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: switch.ventola_pigarden
+    state: 'on'
+  action:
+  - data: {}
+    entity_id: switch.ventola_pigarden
+    service: switch.turn_off
+  mode: single
+- id: '1585680549438'
+  alias: Reboot netgear
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.netgear
+    for: 00:02:00
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.tplink
+    state: 'on'
+  - condition: state
+    entity_id: binary_sensor.zte
+    state: 'on'
+  action:
+  - data: {}
+    entity_id: switch.swnetgear
+    service: switch.turn_off
+  - delay: 00:00:10
+  - data: {}
+    entity_id: switch.swnetgear
+    service: switch.turn_on
+  - data: {}
+    service: script.1585684603551
+- id: '1590966699831'
+  alias: Forza irrigazione gocciolanti
+  description: ''
+  trigger:
+  - entity_id: input_boolean.ciclo_manuale_gocciole
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: input_boolean.pigarden_force_gocciolante_frontale
+    service: input_boolean.turn_on
+  - data: {}
+    entity_id: switch.pigarden_zone_gocciolante_frontale
+    service: switch.turn_on
+  - delay: 00:{{ states('input_number.tempo_irrigazione_3') | int }}:00
+  - data: {}
+    entity_id: switch.pigarden_zone_gocciolante_frontale
+    service: switch.turn_off
+  - data: {}
+    entity_id: input_boolean.pigarden_force_gocciolante_frontale
+    service: input_boolean.turn_off
+  - data: {}
+    entity_id: input_boolean.pigarden_force_gocciolante_posteriore
+    service: input_boolean.turn_on
+  - data: {}
+    entity_id: switch.pigarden_zone_gocciolante_posteriore
+    service: switch.turn_on
+  - delay: 00:{{ states('input_number.tempo_irrigazione_4') | int }}:00
+  - data: {}
+    entity_id: switch.pigarden_zone_gocciolante_posteriore
+    service: switch.turn_off
+  - data: {}
+    entity_id: input_boolean.pigarden_force_gocciolante_posteriore
+    service: input_boolean.turn_off
+  - data: {}
+    entity_id: input_boolean.ciclo_manuale_gocciole
+    service: input_boolean.turn_off
+  mode: single
+- id: '1594939069163'
+  alias: clima deumidifica
+  description: ''
+  trigger:
+  - entity_id: switch.deumidificatore
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    service: script.1594933889917
+  - data: {}
+    entity_id: switch.deumidificatore
+    service: switch.turn_off
+- id: '1594939645397'
+  alias: clima ventola
+  description: ''
+  trigger:
+  - entity_id: switch.ventilatore
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    service: script.1594933936818
+  - data: {}
+    entity_id: switch.ventilatore
+    service: switch.turn_off
+- id: '1605450396306'
+  alias: Spegni ventola bagno
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ (states(''input_select.stato_bagno'')) == ''Automatico'' }}'
+  condition: []
+  action:
+  - repeat:
+      count: '10'
+      sequence:
+      - condition: numeric_state
+        entity_id: sensor.humidity
+        above: '70'
+      - delay: 00:06:00
+  - service: input_select.select_previous
+    entity_id: input_select.stato_bagno
+    data: {}
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.ventola_bagno
+  mode: single
+- id: '1605450807962'
+  alias: Attiva ventola bagno se umido
+  description: ''
+  trigger:
+  - entity_id: sensor.humidity
+    platform: numeric_state
+    above: '75'
+  condition:
+  - condition: state
+    entity_id: switch.ventola_bagno
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: switch.ventola_bagno
+    service: switch.turn_on
+  - service: input_select.select_next
+    data: {}
+    entity_id: input_select.stato_bagno
+  mode: single
+- id: '1607709578741'
+  alias: Riabilita stato sonoff
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/garage/POWER1
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/garage/POWER2
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/garage/POWER3
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/garage/POWER4
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/basculante/POWER
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/condizionatore/Irsend
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/swnetgear/POWER
+  - service: mqtt.publish
+    data:
+      topic: cmnd/sonoff/bagno/POWER
+  mode: single
+- id: '1607870751309'
+  alias: Accendi luci aiole automatico
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+  condition:
+  - condition: template
+    value_template: '{{ (states(''input_select.timer_luci_aiuole'')) == ''Automatico''
+      }}'
+  action:
+  - service: light.turn_on
+    entity_id: light.luce_giardino_anteriore
+  - service: light.turn_on
+    data: {}
+    entity_id: light.luce_giardino_posteriore
+  mode: single
+- id: '1607880141796'
+  alias: Spegni luce aiuole Automatico
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition:
+  - condition: template
+    value_template: '{{ (states(''input_select.timer_luci_aiuole'')) == ''Automatico''
+      }}'
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.luce_giardino_anteriore
+  - service: light.turn_off
+    data: {}
+    entity_id: light.luce_giardino_posteriore
+  mode: single
+- id: '1607943848348'
+  alias: Controllo ventola bagno manuale
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ (states(''input_select.stato_bagno'')) == ''Manuale'' }}'
+  condition: []
+  action:
+  - delay: 00:03:00
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: sensor.humidity
+        above: '75'
+      sequence:
+      - service: input_select.select_previous
+        data: {}
+        entity_id: input_select.stato_bagno
+    default:
+    - delay: 00:17:00
+    - service: input_select.select_next
+      data: {}
+      entity_id: input_select.stato_bagno
+    - service: switch.turn_off
+      entity_id: switch.ventola_bagno
+  mode: single
+- id: '1607959549360'
+  alias: Accensione con bottone ventola bagno
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: switch.ventola_bagno
+    from: 'off'
+    to: 'on'
+    for: 00:00:05
+  condition: []
+  action:
+  - service: input_select.select_previous
+    data: {}
+    entity_id: input_select.stato_bagno
+  mode: single
+- id: '1607988714867'
+  alias: Ripristino ventola bagno su spento
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: switch.ventola_bagno
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ (states(''input_select.stato_bagno'')) == ''Manuale''
+          }}'
+      sequence:
+      - service: input_select.select_next
+        data: {}
+        entity_id: input_select.stato_bagno
+    default:
+    - condition: template
+      value_template: '{{ (states(''input_select.stato_bagno'')) == ''Automatico''
+        }}'
+    - service: input_select.select_previous
+      data: {}
+      entity_id: input_select.stato_bagno
+  mode: single
+- id: '1607990151719'
+  alias: Accendi luci aiuole in manuale
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ states(''sensor.time'') == (states.input_datetime.ora_luci_giardino_on.attributes.timestamp
+      | int | timestamp_custom(''%H:%M'', False)) }}'
+  condition:
+  - condition: template
+    value_template: '{{ (states(''input_select.timer_luci_aiuole'')) == ''Manuale''
+      }}'
+  action:
+  - service: light.turn_on
+    data: {}
+    entity_id: light.luce_giardino_anteriore
+  - service: light.turn_on
+    data: {}
+    entity_id: light.luce_giardino_posteriore
+  mode: single
+- id: '1608135321277'
+  alias: Spegni luce aiuole in Manuale
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ states(''sensor.time'') == (states.input_datetime.ora_luci_giardino_off.attributes.timestamp
+      | int | timestamp_custom(''%H:%M'', False)) }}'
+  condition:
+  - condition: template
+    value_template: '{{ (states(''input_select.timer_luci_aiuole'')) == ''Manuale''
+      }}'
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.luce_giardino_anteriore
+  - service: light.turn_off
+    data: {}
+    entity_id: light.luce_giardino_posteriore
+  mode: single
+- id: '1608144644850'
+  alias: Forza irrigazione gettini
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.ciclo_manuale_irrigatori
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.pigarden_force_irrigazione_muretto
+  - service: switch.turn_on
+    data: {}
+    entity_id: switch.pigarden_zone_irrigazione_muretto
+  - delay: 00:{{ states('input_number.tempo_irrigazione_1') | int }}:00
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.pigarden_force_irrigazione_muretto
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.pigarden_zone_irrigazione_muretto
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.pigarden_force_irrigazione_passaggio
+  - service: switch.turn_on
+    data: {}
+    entity_id: switch.pigarden_zone_irrigazione_passaggio
+  - delay: 00:{{ states('input_number.tempo_irrigazione_2') | int }}:00
+  - service: switch.turn_off
+    data: {}
+    entity_id: switch.pigarden_zone_irrigazione_passaggio
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.pigarden_force_irrigazione_passaggio
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.ciclo_manuale_irrigatori
+  mode: single

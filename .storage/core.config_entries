@@ -1,0 +1,209 @@
+{
+    "version": 1,
+    "key": "core.config_entries",
+    "data": {
+        "entries": [
+            {
+                "entry_id": "482d56550d4a49018c16a8c3fecc5775",
+                "version": 1,
+                "domain": "met",
+                "title": "Home",
+                "data": {
+                    "track_home": true
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "onboarding",
+                "connection_class": "cloud_poll",
+                "unique_id": null
+            },
+            {
+                "entry_id": "af9a7648984b47ada21428f21240a63f",
+                "version": 1,
+                "domain": "mqtt",
+                "title": "configuration.yaml",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "import",
+                "connection_class": "local_push",
+                "unique_id": null
+            },
+            {
+                "entry_id": "5ab3647d758c498ea859b49b54b12ba4",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "POT-LX1",
+                "data": {
+                    "app_data": {
+                        "push_token": "fvI6mFWORXeSHEi_lyjDXh:APA91bGeN8p8VCG_rP7JiZ62CaKwa1TOtjESGQ7QT6dckC_l-I6-TIzyB9DdZgJlOjkIYXp23qoOcjNkfcxPOgqfPytCHpG1PNmlX0kE7G8QXpzPsV7b63-LJYeBfV6grkXhiec_SuAt",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "3.0.2-full (521)",
+                    "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfBlt0Da_CVOUXSTwIHOfyh46kC7n4lQrJ6cOLFxLniUa0vJg181ssZOEWexgE0NzimeblMKgDjniOAOpIEsirNhB42hWU3zievq8kFDsYacs8981wJO1GXUFymZdi1tdsWDkO1lrpInktpLU9UYAwRwgArQOJQjXPDO9yKaSjDTwv0eA=",
+                    "device_id": "b98a04b8d818465f",
+                    "device_name": "Marco",
+                    "manufacturer": "HUAWEI",
+                    "model": "POT-LX1",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "96fb8437f3bb4c68a8eb6b4175a32ffc",
+                    "webhook_id": "42ddcecc82e5734868f5ae43f77e1c0f3d5afd474b525f245ec8c293c27cff40"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "registration",
+                "connection_class": "cloud_push",
+                "unique_id": "io.homeassistant.companion.android-b98a04b8d818465f"
+            },
+            {
+                "entry_id": "c76e2d022a344a4b83bee512d5dcef12",
+                "version": 1,
+                "domain": "mobile_app",
+                "title": "POT-LX1",
+                "data": {
+                    "app_data": {
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPush/android/v1",
+                        "push_token": "eHfszzk3Q5mU48WpSySC17:APA91bE0iKNd6Z6z49PVGWaj9jgDITB0T49Q4V5ZqxkC_PSaL8qg_t2_5lyvVeWOwQ832s09esYP7djytICRtTwBOkkEV79SFOIlnApfiftolzJMLlqmNjGkzuS27YAsR1x-uOXMZO9R"
+                    },
+                    "app_id": "io.homeassistant.companion.android",
+                    "app_name": "Home Assistant",
+                    "app_version": "3.0.2-full (521)",
+                    "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfBl5CPvwcR9VlTLeI7mgPV5AY786E1aI-SSrNgQTkJ1ENxWmjbnN6iBsBqaVa2Y0svPGc6smpA48pAGZPggw-NH1MIpDjUjcbWNKV91GH2tG-6hgo4hSQyaKyorAgF67MpZ1dRRz73aPsEQlXMWa4LEgC0jjMRocBy54hjiwKYAFzjq4=",
+                    "device_id": "48937830ab268963",
+                    "device_name": "Cristina",
+                    "manufacturer": "HUAWEI",
+                    "model": "POT-LX1",
+                    "os_name": "Android",
+                    "os_version": "29",
+                    "supports_encryption": false,
+                    "user_id": "4616cb619119441ba72002b155bd0af0",
+                    "webhook_id": "8fe1e4ba6fc9d6e73f8cb63a0bb25b82029926c23d47a59ea251ad0b90a18345"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "registration",
+                "connection_class": "cloud_push",
+                "unique_id": "io.homeassistant.companion.android-48937830ab268963"
+            },
+            {
+                "entry_id": "10cbc2b723c64bab9a45cc00f0c7452b",
+                "version": 1,
+                "domain": "upnp",
+                "title": "Archer_VR400",
+                "data": {
+                    "st": "urn:schemas-upnp-org:device:InternetGatewayDevice:1",
+                    "udn": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "ssdp",
+                "connection_class": "local_poll",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37::urn:schemas-upnp-org:device:InternetGatewayDevice:1"
+            },
+            {
+                "entry_id": "89516806c258a786091b555b0e64bb57",
+                "version": 1,
+                "domain": "broadlink",
+                "title": "Broadlink",
+                "data": {
+                    "host": "192.168.1.100",
+                    "mac": "780f7719ecef",
+                    "type": 10039,
+                    "timeout": 5
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_poll",
+                "unique_id": "780f7719ecef"
+            },
+            {
+                "entry_id": "a4a24e846dd72703639b02e5b15e7956",
+                "version": 2,
+                "domain": "openweathermap",
+                "title": "OpenWeatherMap",
+                "data": {
+                    "name": "OpenWeatherMap",
+                    "latitude": 45.550721,
+                    "longitude": 11.832374,
+                    "mode": "hourly",
+                    "language": "it",
+                    "api_key": "d2d6666e8fdf9b85b1e3cf483387aadc"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "cloud_poll",
+                "unique_id": "45.550721-11.832374"
+            },
+            {
+                "entry_id": "a20314e70ba5fdbdb3f793c0a6ff75df",
+                "version": 1,
+                "domain": "shopping_list",
+                "title": "Shopping List",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_push",
+                "unique_id": "shopping_list"
+            },
+            {
+                "entry_id": "69c1389eeb5715ae6098c0d3a6ce2e94",
+                "version": 1,
+                "domain": "ipp",
+                "title": "192.168.1.220",
+                "data": {
+                    "port": 631,
+                    "base_path": "/ipp/print",
+                    "ssl": false,
+                    "verify_ssl": false,
+                    "host": "192.168.1.220",
+                    "uuid": "00000000-0000-1000-8000-0018279238a1",
+                    "name": "Canon TS3100 series"
+                },
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_poll",
+                "unique_id": "00000000-0000-1000-8000-0018279238a1"
+            },
+            {
+                "entry_id": "2fd5e07414c6672d5b0bafd29066b1c9",
+                "version": 1,
+                "domain": "nodered",
+                "title": "Node-RED",
+                "data": {},
+                "options": {},
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "source": "user",
+                "connection_class": "local_push",
+                "unique_id": null
+            }
+        ]
+    }
+}

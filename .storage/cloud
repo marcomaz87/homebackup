@@ -1,0 +1,77 @@
+{
+    "version": 1,
+    "key": "cloud",
+    "data": {
+        "alexa_enabled": true,
+        "alexa_entity_configs": {
+            "automation.reboot_netgear": {
+                "should_expose": false
+            },
+            "binary_sensor.netgear": {
+                "should_expose": false
+            },
+            "binary_sensor.pigarden_state_7": {
+                "should_expose": true
+            },
+            "binary_sensor.remote_ui": {
+                "should_expose": false
+            },
+            "binary_sensor.tplink": {
+                "should_expose": false
+            },
+            "binary_sensor.tv_lg": {
+                "should_expose": false
+            },
+            "binary_sensor.updater": {
+                "should_expose": false
+            },
+            "binary_sensor.wii": {
+                "should_expose": false
+            },
+            "binary_sensor.zte": {
+                "should_expose": false
+            },
+            "sensor.temperature": {
+                "should_expose": false
+            },
+            "switch.learner": {
+                "should_expose": false
+            },
+            "switch.pigarden_interruttore": {
+                "should_expose": false
+            },
+            "switch.ventola": {
+                "should_expose": false
+            }
+        },
+        "alexa_report_state": true,
+        "cloud_user": "d6f911c5b4ee4f51b5fa0df6b2ed91ad",
+        "cloudhooks": {
+            "42ddcecc82e5734868f5ae43f77e1c0f3d5afd474b525f245ec8c293c27cff40": {
+                "cloudhook_id": "009825c458874f899f7ec272b1c9cb8a",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfBlt0Da_CVOUXSTwIHOfyh46kC7n4lQrJ6cOLFxLniUa0vJg181ssZOEWexgE0NzimeblMKgDjniOAOpIEsirNhB42hWU3zievq8kFDsYacs8981wJO1GXUFymZdi1tdsWDkO1lrpInktpLU9UYAwRwgArQOJQjXPDO9yKaSjDTwv0eA=",
+                "managed": true,
+                "webhook_id": "42ddcecc82e5734868f5ae43f77e1c0f3d5afd474b525f245ec8c293c27cff40"
+            },
+            "8fe1e4ba6fc9d6e73f8cb63a0bb25b82029926c23d47a59ea251ad0b90a18345": {
+                "cloudhook_id": "3b40ec0296cb40e2be6652930a8895a5",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfBl5CPvwcR9VlTLeI7mgPV5AY786E1aI-SSrNgQTkJ1ENxWmjbnN6iBsBqaVa2Y0svPGc6smpA48pAGZPggw-NH1MIpDjUjcbWNKV91GH2tG-6hgo4hSQyaKyorAgF67MpZ1dRRz73aPsEQlXMWa4LEgC0jjMRocBy54hjiwKYAFzjq4=",
+                "managed": true,
+                "webhook_id": "8fe1e4ba6fc9d6e73f8cb63a0bb25b82029926c23d47a59ea251ad0b90a18345"
+            },
+            "d7c77d21d2ff3613a9b5a148fe15239b90a4c2859521e5a8cd4fe217e4a22c51": {
+                "cloudhook_id": "fbff7b10574648caa4c93bba0472f900",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfBlY0Kf98vy5WoJ6yaa3ZSA3OtB6iNROf2vPufECk-xp6UPEEX3AZzSUkTKTvEOfQRlBc2lPTgrpb_zDGDjysqc9Vum9-tXE0rKPxDGOyEc7vLQSVqOTai0yq0KjZ0xgNdQGfgap27jKWpyJI-Dp9n65rlQyG5DgxV3dL8tLagTF1m2w=",
+                "managed": false,
+                "webhook_id": "d7c77d21d2ff3613a9b5a148fe15239b90a4c2859521e5a8cd4fe217e4a22c51"
+            }
+        },
+        "google_enabled": false,
+        "google_entity_configs": {},
+        "google_local_webhook_id": "d7c77d21d2ff3613a9b5a148fe15239b90a4c2859521e5a8cd4fe217e4a22c51",
+        "google_report_state": true,
+        "google_secure_devices_pin": "EliE3173",
+        "remote_enabled": true,
+        "username": "e6ca7ff6-7414-4112-8293-5b6767c1944c"
+    }
+}
